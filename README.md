@@ -7,6 +7,8 @@ It focuses on clarity, relational thinking, query logic, transaction behavior, a
 
 ---
 
+![alt text](image.png)
+
 ---
 
 ## Purpose
