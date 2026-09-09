@@ -1,4 +1,4 @@
-import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}from"./index-D5IfMMY7.js";const m={Wrapper:n.section`
+import{c,r as i,j as e,F as a,d as t,Q as d,a as o,R as p,g as x,i as h,h as m}from"./index-Mc0Xt7Eb.js";const g={Wrapper:c.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -317,46 +317,6 @@ import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}fro
             line-height: 1.55;
         }
 
-        .kvs {
-            display: grid;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .kv {
-            display: grid;
-            grid-template-columns: 170px 1fr;
-            gap: 10px;
-            padding: 10px;
-            border-radius: 14px;
-            border: 1px solid var(--color-border);
-            background: color-mix(
-                in srgb,
-                var(--color-surface-2) 78%,
-                transparent
-            );
-        }
-
-        .k {
-            font-weight: 900;
-            color: var(--color-text-primary);
-            font-size: 13px;
-        }
-
-        .v {
-            color: var(--color-text-secondary);
-            font-size: 13px;
-            line-height: 1.55;
-        }
-
-        .small {
-            display: block;
-            margin-top: 3px;
-            color: var(--color-text-muted);
-            font-size: 12.5px;
-            line-height: 1.5;
-        }
-
         .compare {
             border-radius: 14px;
             border: 1px solid var(--color-border);
@@ -401,18 +361,8 @@ import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}fro
             line-height: 1.5;
         }
 
-        .scenario {
-            display: grid;
-            gap: 10px;
+        .ex {
             margin-top: 10px;
-        }
-
-        .step {
-            display: grid;
-            grid-template-columns: 34px 1fr;
-            gap: 10px;
-            align-items: center;
-            padding: 10px;
             border-radius: 14px;
             border: 1px solid var(--color-border);
             background: color-mix(
@@ -420,34 +370,26 @@ import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}fro
                 var(--color-surface-2) 78%,
                 transparent
             );
+            padding: 10px;
         }
 
-        .num {
-            width: 28px;
-            height: 28px;
-            border-radius: 10px;
-            display: grid;
-            place-items: center;
-            border: 1px solid var(--color-border);
-            background: color-mix(
-                in srgb,
-                var(--color-surface) 86%,
-                transparent
-            );
-            color: var(--color-primary);
+        .exTitle {
             font-weight: 900;
-            font-size: 12px;
-        }
-
-        .txt {
-            color: var(--color-text-secondary);
-            font-size: 13px;
-            line-height: 1.55;
-        }
-
-        .txt b {
             color: var(--color-text-primary);
-            font-weight: 900;
+            font-size: 12.5px;
+            margin-bottom: 6px;
+        }
+
+        .pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-family:
+                ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                "Liberation Mono", "Courier New", monospace;
+            font-size: 12.5px;
+            line-height: 1.55;
+            color: var(--color-text-secondary);
         }
 
         .bottomNote {
@@ -505,16 +447,18 @@ import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}fro
                 grid-column: span 12;
             }
 
-            .kv {
-                grid-template-columns: 1fr;
-            }
-
             .row {
                 grid-template-columns: 1fr;
             }
-
-            .step {
-                grid-template-columns: 1fr;
-            }
         }
-    `},v=()=>{const[s,l]=a.useState(!0),r=a.useMemo(()=>({id:"backupAndRecovery",title:"Backup and Recovery",sub:"Full, incremental, differential backups, crash recovery, logs, and checkpoints."}),[]);return e.jsxs(m.Wrapper,{id:r.id,children:[e.jsxs("button",{type:"button",className:`head ${s?"open":""}`,onClick:()=>l(c=>!c),"aria-expanded":s,"aria-controls":`${r.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(i,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:r.title}),e.jsx("span",{className:"badge",children:"Safety"})]}),e.jsx("p",{className:"sub",children:r.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(t,{})})]}),e.jsx("div",{id:`${r.id}-content`,className:`content ${s?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"Why backup and recovery matter"})]}),e.jsxs("p",{className:"p",children:["Backups protect you from ",e.jsx("b",{children:"human mistakes"})," ","(accidental delete),",e.jsx("b",{children:"hardware failures"}),", ",e.jsx("b",{children:"software bugs"}),", and ",e.jsx("b",{children:"crashes"}),". Recovery is the process of bringing the database back to a correct state."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Backup"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Restore"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Replay logs"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Consistent state"})]}),e.jsx("p",{className:"note",children:"Backups give you a base copy. Logs help you recover the latest committed changes."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Backup types"})]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Full backup"}),e.jsxs("div",{className:"v",children:["Takes a complete copy of the database at a point in time.",e.jsx("span",{className:"small",children:"Pros: simplest restore - Cons: slower and larger size"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Incremental backup"}),e.jsxs("div",{className:"v",children:["Backs up only the data changed since the"," ",e.jsx("b",{children:"last backup"})," (full or incremental).",e.jsx("span",{className:"small",children:"Pros: fast and small - Cons: restore needs full + all incrementals"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Differential backup"}),e.jsxs("div",{className:"v",children:["Backs up only the data changed since the"," ",e.jsx("b",{children:"last full backup"}),".",e.jsx("span",{className:"small",children:"Pros: restore needs full + latest differential - Cons: grows bigger over time"})]})]})]}),e.jsxs("div",{className:"compare",children:[e.jsxs("div",{className:"row head",children:[e.jsx("div",{children:"Type"}),e.jsx("div",{children:"Restore requirement"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Full"}),e.jsx("div",{children:"Restore the full backup"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Incremental"}),e.jsx("div",{children:"Full + every incremental in order"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Differential"}),e.jsx("div",{children:"Full + latest differential"})]})]}),e.jsx("p",{className:"note",children:"Simple interview line: Incremental is smaller but restore is longer. Differential is larger but restore is simpler."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Crash recovery"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Crash recovery"})," means restoring the database to a correct state after a crash like power loss or server restart."]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:["Ensure ",e.jsx("b",{children:"committed"})," transactions are not lost"]}),e.jsxs("li",{children:["Undo ",e.jsx("b",{children:"uncommitted"})," transactions to avoid partial updates"]}),e.jsx("li",{children:"Bring database back to a consistent state"})]}),e.jsx("p",{className:"note",children:"Recovery is mainly about redo committed work and undo incomplete work."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Log-based recovery"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Log-based recovery"})," uses a log file that records changes made by transactions. The log is used to ",e.jsx("b",{children:"redo"})," or ",e.jsx("b",{children:"undo"})," operations during recovery."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Redo"}),e.jsx("div",{className:"v",children:"Re-apply changes of committed transactions if they were not written to disk."})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Undo"}),e.jsx("div",{className:"v",children:"Roll back changes of uncommitted transactions to remove partial updates."})]})]}),e.jsx("p",{className:"note",children:"Logs are usually written before data pages. That rule is called WAL."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Checkpoints"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"checkpoint"}),' is a marker that says "up to this point, the database has flushed enough info to make recovery faster". It reduces how far back the DBMS must scan the log after a crash.']}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Log grows"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Checkpoint"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Less redo work"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Faster restart"})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Checkpoints write a safe recovery point into the log"}),e.jsx("li",{children:"DBMS flushes some dirty pages to disk"}),e.jsx("li",{children:"Recovery scans logs mainly after the last checkpoint"})]}),e.jsx("p",{className:"note",children:"Without checkpoints, recovery may need to scan a huge log, slowing restart."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"Quick scenario you can say in interviews"})]}),e.jsxs("div",{className:"scenario",children:[e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"1"}),e.jsxs("div",{className:"txt",children:["Restore latest ",e.jsx("b",{children:"full backup"})]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"2"}),e.jsxs("div",{className:"txt",children:["Apply ",e.jsx("b",{children:"latest differential"})," or all"," ",e.jsx("b",{children:"incrementals"})]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"3"}),e.jsxs("div",{className:"txt",children:["Use ",e.jsx("b",{children:"logs"})," to redo committed and undo uncommitted work"]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"4"}),e.jsx("div",{className:"txt",children:"Checkpoint helps by cutting log scan time"})]})]})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(i,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Full is base copy. Incremental is since last backup. Differential is since last full. Logs do redo and undo. Checkpoints speed recovery."})]})]})]})})]})};export{v as default};
+    `},v=()=>{const[r,n]=i.useState(!0),s=i.useMemo(()=>({id:"nosqlBasics",title:"NoSQL Basics",sub:"What NoSQL is, main types, SQL vs NoSQL, and when to choose NoSQL for real systems."}),[]);return e.jsxs(g.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${r?"open":""}`,onClick:()=>n(l=>!l),"aria-expanded":r,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(a,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"NoSQL"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(t,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${r?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"What is NoSQL"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"NoSQL"})," means ",e.jsx("b",{children:"Not Only SQL"}),". It is a category of databases designed for flexibility, high scale, and fast performance for certain workloads. NoSQL systems often store data in formats other than rows and tables."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Flexible schema - fields can vary between records"}),e.jsx("li",{children:"Scales horizontally - add more machines to handle load"}),e.jsx("li",{children:"Optimized for specific access patterns"})]}),e.jsx("p",{className:"note",children:'NoSQL is not "no structure". It is structure that fits the use case.'})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Types"})]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Key-value"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Document"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Column family"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Graph"})]}),e.jsx("p",{className:"p",children:"Each type is built around a different way of storing and querying data. Pick based on how your app reads and writes data."}),e.jsx("p",{className:"note",children:"Most real systems use a mix of SQL and NoSQL."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Key-value"})]}),e.jsxs("p",{className:"p",children:["Stores data as ",e.jsx("b",{children:"key - value"})," pairs. You give a key, it returns a value. Very fast for simple lookups."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example shape"}),e.jsx("pre",{className:"pre",children:`"user:42" -> "{ name: 'Ash', plan: 'pro' }"`})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Best for caching, sessions, counters, feature flags"}),e.jsx("li",{children:"Weak for complex joins or ad-hoc analytics"})]})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Document"})]}),e.jsxs("p",{className:"p",children:["Stores records as ",e.jsx("b",{children:"documents"}),", commonly JSON-like. Each document can have nested objects and arrays."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example document"}),e.jsx("pre",{className:"pre",children:`{
+  "_id": "order_1001",
+  "userId": "u42",
+  "items": [
+    { "sku": "p10", "qty": 2 },
+    { "sku": "p21", "qty": 1 }
+  ],
+  "total": 1299
+}`})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Great for user profiles, product catalogs, logs, content apps"}),e.jsx("li",{children:"Joins are limited, denormalization is common"})]})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"Column family"})]}),e.jsxs("p",{className:"p",children:["Stores data in ",e.jsx("b",{children:"column families"})," ","(wide-column). It is optimized for large-scale reads and writes across many nodes. Rows can have many columns and columns can vary."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Good for time-series, telemetry, large event data"}),e.jsx("li",{children:"Designed for high throughput and scale"}),e.jsx("li",{children:"Query patterns must be planned in advance"})]}),e.jsx("p",{className:"note",children:"Think of it like a giant sparse table tuned for scale."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(m,{})}),e.jsx("h3",{className:"h3",children:"Graph"})]}),e.jsxs("p",{className:"p",children:["Stores data as ",e.jsx("b",{children:"nodes"})," and ",e.jsx("b",{children:"edges"}),". The focus is on relationships and traversals."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example idea"}),e.jsx("pre",{className:"pre",children:`(Ash) -[FRIEND]-> (Neha)
+(Ash) -[LIKES]-> (Robotics)
+(Robotics) -[RELATED]-> (AI)`})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Best for social networks, recommendations, fraud detection"}),e.jsx("li",{children:"Strong for relationship-heavy queries"})]})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"SQL vs NoSQL comparison"})]}),e.jsxs("div",{className:"compare",children:[e.jsxs("div",{className:"row head",children:[e.jsx("div",{children:"SQL (Relational)"}),e.jsx("div",{children:"NoSQL"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Fixed schema, tables and rows"}),e.jsx("div",{children:"Flexible schema, multiple data models"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Strong joins and complex queries"}),e.jsx("div",{children:"Optimized for specific access patterns"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"ACID transactions are common"}),e.jsx("div",{children:"Consistency model can vary, often eventual consistency"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Vertical scaling is common (bigger machine)"}),e.jsx("div",{children:"Horizontal scaling is common (more machines)"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Great for financial, inventory, strong integrity apps"}),e.jsx("div",{children:"Great for logs, content, high traffic, flexible data apps"})]})]}),e.jsx("p",{className:"note",children:"Rule of thumb: if relationships and correctness are core, SQL wins. If scale and flexible structure are core, NoSQL helps."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"When to use NoSQL"})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"When schema changes frequently and you want flexibility"}),e.jsx("li",{children:"When you need massive scale and horizontal scaling is the plan"}),e.jsx("li",{children:"When data is unstructured or semi-structured (logs, events, content)"}),e.jsx("li",{children:"When you need very fast key-based reads (cache, sessions)"}),e.jsx("li",{children:"When relationships are best represented as graphs (recommendations)"}),e.jsx("li",{children:"When your queries are predictable and designed around the storage model"})]}),e.jsx("p",{className:"note",children:"In many products: SQL for core data, NoSQL for logs, cache, search, and high-scale side workloads."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"NoSQL is about choosing the right data model - key-value for speed, document for flexible JSON, column family for scale, graph for relationships."})]})]})]})})]})};export{v as default};

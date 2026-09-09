@@ -1,4 +1,4 @@
-import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./index-D5IfMMY7.js";const h={Wrapper:t.section`
+import{c as t,r as i,j as e,b as r,d as c,B as o,s as d,o as x,q as p,C as h}from"./index-Mc0Xt7Eb.js";const m={Wrapper:t.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -42,7 +42,6 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
             opacity: 0.95;
         }
 
-        /* subtle table grid texture */
         .head::after {
             content: "";
             position: absolute;
@@ -315,24 +314,24 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
             color: var(--color-text-secondary);
             font-size: 13.5px;
             line-height: 1.55;
+            padding-left: 14px;
+            position: relative;
         }
 
-        .list b {
-            color: var(--color-text-primary);
-            font-weight: 900;
+        .list li::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--color-primary);
+            position: absolute;
+            left: 0;
+            top: 8px;
+            opacity: 0.9;
         }
 
-        .kvs {
-            display: grid;
-            gap: 10px;
+        .ex {
             margin-top: 10px;
-        }
-
-        .kv {
-            display: grid;
-            grid-template-columns: 160px 1fr;
-            gap: 10px;
-            padding: 10px;
             border-radius: 14px;
             border: 1px solid var(--color-border);
             background: color-mix(
@@ -340,43 +339,50 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
                 var(--color-surface-2) 78%,
                 transparent
             );
+            padding: 10px;
         }
 
-        .k {
+        .exTitle {
             font-weight: 900;
             color: var(--color-text-primary);
-            font-size: 13px;
+            font-size: 12.5px;
+            margin-bottom: 6px;
         }
 
-        .v {
-            color: var(--color-text-secondary);
-            font-size: 13px;
+        .code {
+            width: 100%;
+            overflow: auto;
+            background: var(--color-code-bg);
+            border: 1px solid var(--color-code-border);
+            border-radius: 12px;
+            padding: 10px;
+            color: var(--color-text-primary);
+            font-size: 12.5px;
+            line-height: 1.6;
+        }
+
+        .exText {
+            margin-top: 8px;
+            color: var(--color-text-muted);
+            font-size: 12.5px;
             line-height: 1.55;
         }
 
-        .small {
-            display: block;
-            margin-top: 3px;
-            color: var(--color-text-muted);
-            font-size: 12.5px;
-            line-height: 1.5;
-        }
-
-        .tree {
-            margin-top: 10px;
+        .table {
             border-radius: 14px;
             border: 1px solid var(--color-border);
+            overflow: hidden;
             background: color-mix(
                 in srgb,
                 var(--color-surface-2) 76%,
                 transparent
             );
-            overflow: hidden;
+            margin-top: 10px;
         }
 
         .tRow {
             display: grid;
-            grid-template-columns: 140px 1fr;
+            grid-template-columns: 160px 1.2fr 1fr;
             gap: 10px;
             padding: 10px;
             border-top: 1px solid var(--color-border);
@@ -386,16 +392,24 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
             border-top: 0;
         }
 
-        .tLabel {
-            color: var(--color-text-primary);
-            font-weight: 900;
-            font-size: 13px;
+        .tRow.head {
+            background: color-mix(
+                in srgb,
+                var(--color-surface) 80%,
+                transparent
+            );
         }
 
-        .tVal {
+        .tRow.head div {
+            color: var(--color-text-primary);
+            font-weight: 900;
+            font-size: 12.5px;
+        }
+
+        .tRow div {
             color: var(--color-text-secondary);
-            font-size: 13px;
-            line-height: 1.55;
+            font-size: 12.8px;
+            line-height: 1.5;
         }
 
         .bottomNote {
@@ -453,12 +467,8 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
                 grid-column: span 12;
             }
 
-            .kv {
-                grid-template-columns: 1fr;
-            }
-
             .tRow {
                 grid-template-columns: 1fr;
             }
         }
-    `},b=()=>{const[r,o]=i.useState(!0),s=i.useMemo(()=>({id:"indexing",title:"Indexing",sub:"What indexes are, clustered vs non-clustered, B-Tree, hash index, when to use, and trade-offs."}),[]);return e.jsxs(h.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${r?"open":""}`,onClick:()=>o(d=>!d),"aria-expanded":r,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(a,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"Performance"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(c,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${r?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"What is index"})]}),e.jsxs("p",{className:"p",children:["An ",e.jsx("b",{children:"index"})," is an extra data structure that helps the database find rows faster without scanning the entire table."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Table"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Full scan"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Slow"})]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Index"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Jump to rows"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Fast"})]}),e.jsx("p",{className:"note",children:"Index is like a book index. You jump to the page instead of reading every page."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"When to use index"})]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:["Columns used often in ",e.jsx("b",{children:"WHERE"})]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"JOIN"})," conditions"]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"ORDER BY"})]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"GROUP BY"})," (sometimes)"]}),e.jsx("li",{children:"Columns with high selectivity (many unique values)"})]}),e.jsx("p",{className:"note",children:"Index helps when it reduces scanned rows a lot. Index is less useful when most rows match."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(n,{})}),e.jsx("h3",{className:"h3",children:"Clustered index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"clustered index"})," decides the physical order of rows on disk based on the indexed column. The table data is stored in the same order as the clustered key."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"How many"}),e.jsxs("div",{className:"v",children:["Usually ",e.jsx("b",{children:"one"})," per table, because rows can be stored physically in one order only."]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Best for"}),e.jsxs("div",{className:"v",children:["Range queries like",e.jsx("span",{className:"small",children:'"WHERE createdAt BETWEEN A AND B"'})]})]})]}),e.jsx("p",{className:"note",children:"Many databases make primary key clustered by default, but not always."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(n,{})}),e.jsx("h3",{className:"h3",children:"Non-clustered index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"non-clustered index"})," is a separate structure that stores index keys and pointers to the actual table rows. Table rows are not stored in index order."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"How many"}),e.jsx("div",{className:"v",children:"Multiple can exist on the same table."})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Best for"}),e.jsx("div",{className:"v",children:"Fast lookups on frequently filtered columns."})]})]}),e.jsx("p",{className:"note",children:"It is like having multiple indexes in a book for different topics."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"B-Tree"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"B-Tree"})," is the most common index structure in relational databases. It stays balanced so searching is fast. It supports both equality and range queries efficiently."]}),e.jsxs("div",{className:"tree",children:[e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Good for"}),e.jsx("span",{className:"tVal",children:'"=", "<", ">", BETWEEN, ORDER BY'})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Why"}),e.jsx("span",{className:"tVal",children:"Balanced tree means fewer disk reads while searching"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Common use"}),e.jsx("span",{className:"tVal",children:"Primary keys, createdAt sorting, range filters"})]})]}),e.jsx("p",{className:"note",children:"In interviews, just remember this: B-Tree is default because it handles many query types well."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"Hash index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"hash index"})," uses a hash function to map a key to a bucket. It is very fast for equality lookups."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Great for"}),e.jsx("div",{className:"v",children:'Equality - "WHERE id = 10"'})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Bad for"}),e.jsxs("div",{className:"v",children:["Range queries and sorting",e.jsx("span",{className:"small",children:"Example: BETWEEN, ORDER BY"})]})]})]}),e.jsx("p",{className:"note",children:"Hash indexes are not always available in all engines for all table types."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Trade-offs"})]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:[e.jsx("b",{children:"Faster reads"})," but ",e.jsx("b",{children:"slower writes"})," ","because index must be updated on INSERT, UPDATE, DELETE"]}),e.jsxs("li",{children:["Uses extra ",e.jsx("b",{children:"storage"})]}),e.jsx("li",{children:"Too many indexes can slow down write-heavy systems"}),e.jsx("li",{children:"Wrong indexes do nothing but still cost space and update time"}),e.jsx("li",{children:"Index maintenance can increase complexity"})]}),e.jsx("p",{className:"note",children:"Rule: index what you search and join on often. Avoid indexing everything blindly."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"B-Tree is general purpose. Hash is equality only. Index speeds reads but adds write and storage cost."})]})]})]})})]})};export{b as default};
+    `},b=()=>{const[a,n]=i.useState(!0),s=i.useMemo(()=>({id:"constraints",title:"Constraints",sub:"Rules that protect data quality - NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK, DEFAULT."}),[]);return e.jsxs(m.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${a?"open":""}`,onClick:()=>n(l=>!l),"aria-expanded":a,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(r,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"Data rules"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(c,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${a?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(r,{})}),e.jsx("h3",{className:"h3",children:"What is a constraint"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"constraint"})," is a rule enforced by the database to keep data valid. It prevents wrong inserts and updates, so your tables do not become messy over time."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Integrity"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Consistency"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Safety"})]}),e.jsx("p",{className:"note",children:"Constraints are checked automatically on INSERT and UPDATE."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"NOT NULL"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"NOT NULL"})," means this column must always have a value. It cannot be NULL."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"name VARCHAR(100) NOT NULL"}),e.jsx("div",{className:"exText",children:'A user must have a name. Blank string "" is allowed, but NULL is not.'})]}),e.jsx("p",{className:"note",children:'NULL means "unknown or missing", it is not the same as 0 or "".'})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"UNIQUE"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"UNIQUE"})," means all values in this column must be different. No duplicates allowed."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"email VARCHAR(255) UNIQUE"}),e.jsx("div",{className:"exText",children:"Two users cannot have the same email."})]}),e.jsx("p",{className:"note",children:'Many databases allow multiple NULLs in a UNIQUE column, because NULL is treated as "no value".'})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"PRIMARY KEY"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"PRIMARY KEY"})," uniquely identifies each row. It is basically ",e.jsx("b",{children:"UNIQUE + NOT NULL"})," ","together."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"id INT PRIMARY KEY"}),e.jsx("div",{className:"exText",children:"Each row must have a unique id and it cannot be NULL."})]}),e.jsx("p",{className:"note",children:"One table has only one primary key, but it can be a composite key."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"FOREIGN KEY"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"FOREIGN KEY"})," links one table to another. It ensures the referenced value exists in the parent table. This keeps"," ",e.jsx("b",{children:"referential integrity"}),"."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"orders.user_id REFERENCES users(id)"}),e.jsx("div",{className:"exText",children:"An order must belong to a valid user. You cannot set user_id to a non-existing user."})]}),e.jsx("p",{className:"note",children:"Deleting parent rows can affect child rows, often controlled by ON DELETE rules like CASCADE or SET NULL."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"CHECK"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"CHECK"})," enforces a condition on values. If the condition fails, the insert or update is rejected."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"age INT CHECK (age >= 0 AND age <= 120)"}),e.jsx("div",{className:"exText",children:"Age must stay in a valid range."})]}),e.jsx("p",{className:"note",children:`CHECK is great for domain rules like "price >= 0" or "status in ('pending','paid')".`})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"DEFAULT"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"DEFAULT"})," sets a value automatically when no value is provided. It avoids NULLs and makes inserts easier."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"status VARCHAR(20) DEFAULT 'active'"}),e.jsx("div",{className:"exText",children:'If status is not given, it becomes "active".'})]}),e.jsx("p",{className:"note",children:"DEFAULT is used for timestamps, boolean flags, and common initial states."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(r,{})}),e.jsx("h3",{className:"h3",children:"Quick comparison"})]}),e.jsxs("div",{className:"table",children:[e.jsxs("div",{className:"tRow head",children:[e.jsx("div",{children:"Constraint"}),e.jsx("div",{children:"What it prevents"}),e.jsx("div",{children:"Simple use case"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"NOT NULL"}),e.jsx("div",{children:"Missing values"}),e.jsx("div",{children:"name, created_at"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"UNIQUE"}),e.jsx("div",{children:"Duplicate values"}),e.jsx("div",{children:"email, phone"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"PRIMARY KEY"}),e.jsx("div",{children:"Duplicate or NULL identity"}),e.jsx("div",{children:"id"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"FOREIGN KEY"}),e.jsx("div",{children:"Invalid references"}),e.jsx("div",{children:"orders.user_id"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"CHECK"}),e.jsx("div",{children:"Invalid domain values"}),e.jsx("div",{children:"price >= 0"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"DEFAULT"}),e.jsx("div",{children:"Empty initial state"}),e.jsx("div",{children:"status = 'active'"})]})]}),e.jsx("p",{className:"note",children:"Interview line: constraints are the database side validation layer, they protect data even if app code has bugs."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(r,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"PRIMARY KEY identifies, FOREIGN KEY connects, UNIQUE avoids duplicates, NOT NULL avoids missing, CHECK enforces rules, DEFAULT fills missing values."})]})]})]})})]})};export{b as default};

@@ -1,4 +1,4 @@
-import{c as n,r as i,j as e,a,d as t,h as d,i as c,k as p,l as x}from"./index-D5IfMMY7.js";const m={Wrapper:n.section`
+import{c as n,r as i,j as s,t as r,d as c,u as t,v as d,w as p,x,b as m}from"./index-Mc0Xt7Eb.js";const h={Wrapper:n.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -306,57 +306,6 @@ import{c as n,r as i,j as e,a,d as t,h as d,i as c,k as p,l as x}from"./index-D5
             user-select: none;
         }
 
-        .ex {
-            margin-top: 10px;
-            border-radius: 14px;
-            border: 1px solid var(--color-border);
-            background: color-mix(
-                in srgb,
-                var(--color-surface-2) 78%,
-                transparent
-            );
-            padding: 10px;
-        }
-
-        .exTitle {
-            font-weight: 900;
-            color: var(--color-text-primary);
-            font-size: 12.5px;
-            margin-bottom: 6px;
-        }
-
-        .mono {
-            font-family:
-                ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-                "Liberation Mono", "Courier New", monospace;
-            font-size: 12.8px;
-            color: var(--color-text-secondary);
-            line-height: 1.5;
-            word-break: break-word;
-        }
-
-        .exList {
-            display: grid;
-            gap: 6px;
-        }
-
-        .exList li {
-            color: var(--color-text-secondary);
-            font-size: 13px;
-            line-height: 1.45;
-        }
-
-        .list {
-            display: grid;
-            gap: 10px;
-        }
-
-        .list li {
-            color: var(--color-text-secondary);
-            font-size: 13.5px;
-            line-height: 1.55;
-        }
-
         .kvs {
             display: grid;
             gap: 10px;
@@ -365,7 +314,7 @@ import{c as n,r as i,j as e,a,d as t,h as d,i as c,k as p,l as x}from"./index-D5
 
         .kv {
             display: grid;
-            grid-template-columns: 140px 1fr;
+            grid-template-columns: 110px 1fr;
             gap: 10px;
             padding: 10px;
             border-radius: 14px;
@@ -395,6 +344,17 @@ import{c as n,r as i,j as e,a,d as t,h as d,i as c,k as p,l as x}from"./index-D5
             color: var(--color-text-muted);
             font-size: 12.5px;
             line-height: 1.5;
+        }
+
+        .list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .list li {
+            color: var(--color-text-secondary);
+            font-size: 13.5px;
+            line-height: 1.55;
         }
 
         .bottomNote {
@@ -456,4 +416,4 @@ import{c as n,r as i,j as e,a,d as t,h as d,i as c,k as p,l as x}from"./index-D5
                 grid-template-columns: 1fr;
             }
         }
-    `},g=()=>{const[r,o]=i.useState(!0),s=i.useMemo(()=>({id:"dataModels",title:"Data Models",sub:"Meaning of data model and the major types - hierarchical, network, relational, object-oriented, and ER model."}),[]);return e.jsxs(m.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${r?"open":""}`,onClick:()=>o(l=>!l),"aria-expanded":r,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(a,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"Models"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(t,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${r?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"Data model meaning"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"data model"})," is a structured way to describe how data is organized, related, stored, and accessed. It defines the rules for data structure and relationships so systems and humans can understand the same data design."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Structure"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Relationships"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Constraints"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Operations"})]}),e.jsx("p",{className:"note",children:"Example: In a shopping app, customers place orders. Orders contain items. A data model decides how these are represented and linked."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"Hierarchical model"})]}),e.jsxs("p",{className:"p",children:["Data is organized like a ",e.jsx("b",{children:"tree"}),". One parent can have many children, but each child has only one parent."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Mental model"}),e.jsx("div",{className:"mono",children:"Company - Department - Employee"})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Good for strict 1-to-many relationships"}),e.jsx("li",{children:"Hard when you need many-to-many relationships"})]}),e.jsx("p",{className:"note",children:'Think "folder structure" style data.'})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"Network model"})]}),e.jsxs("p",{className:"p",children:["Data is organized as a ",e.jsx("b",{children:"graph"}),". A record can have multiple parents and multiple children. This supports many-to-many naturally."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Mental model"}),e.jsx("div",{className:"mono",children:"Student - EnrolledIn - Course"})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Handles complex relationships well"}),e.jsx("li",{children:"More complex to design and query than relational"})]}),e.jsx("p",{className:"note",children:'Think "connected nodes" style data.'})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(c,{})}),e.jsx("h3",{className:"h3",children:"Relational model"})]}),e.jsxs("p",{className:"p",children:["Data is stored in ",e.jsx("b",{children:"tables"})," (relations). Rows are tuples and columns are attributes. Relationships are formed using keys."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example tables"}),e.jsxs("ul",{className:"exList",children:[e.jsx("li",{children:"customers(customerId, name)"}),e.jsx("li",{children:"orders(orderId, customerId, total)"})]})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Most popular model used in real systems"}),e.jsx("li",{children:"SQL makes queries powerful and standard"})]}),e.jsx("p",{className:"note",children:"Relationships are typically built using foreign keys."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Object-oriented model"})]}),e.jsxs("p",{className:"p",children:["Data is stored as ",e.jsx("b",{children:"objects"})," similar to OOP. Objects contain both data and behavior. It fits naturally with languages that use classes."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsxs("div",{className:"mono",children:["class Order ","{"," items, total, place()"," ","}"]})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Useful for complex data like CAD, multimedia, simulations"}),e.jsx("li",{children:"Less common than relational in typical business apps"})]}),e.jsx("p",{className:"note",children:"Object relational mapping tries to bridge OOP and relational DBs."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Entity-Relationship model - ER model basics"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"ER model"})," is a conceptual model used to design a database before writing tables. It uses",e.jsx("b",{children:"entities"}),", ",e.jsx("b",{children:"attributes"}),", and",e.jsx("b",{children:"relationships"})," to represent real-world data."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Entity"}),e.jsxs("div",{className:"v",children:["A real-world object or concept.",e.jsx("span",{className:"small",children:"Example: Student, Customer, Product"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Attribute"}),e.jsxs("div",{className:"v",children:["Properties of an entity.",e.jsx("span",{className:"small",children:"Example: Student has name, rollNo"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Relationship"}),e.jsxs("div",{className:"v",children:["How entities are connected.",e.jsx("span",{className:"small",children:"Example: Customer places Order"})]})]})]}),e.jsx("p",{className:"note",children:"ER model helps you get the logic correct first, then you convert it into tables."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Hierarchical is tree, network is graph, relational is tables, object-oriented is objects, ER is design blueprint."})]})]})]})})]})};export{g as default};
+    `},g=()=>{const[a,l]=i.useState(!0),e=i.useMemo(()=>({id:"sqlBasics",title:"SQL Basics",sub:"SQL meaning and the 5 command groups - DDL, DML, DQL, TCL, DCL, with common commands and examples."}),[]);return s.jsxs(h.Wrapper,{id:e.id,children:[s.jsxs("button",{type:"button",className:`head ${a?"open":""}`,onClick:()=>l(o=>!o),"aria-expanded":a,"aria-controls":`${e.id}-content`,children:[s.jsxs("div",{className:"left",children:[s.jsx("span",{className:"icon",children:s.jsx(r,{})}),s.jsxs("div",{className:"text",children:[s.jsxs("div",{className:"titleRow",children:[s.jsx("h2",{className:"title",children:e.title}),s.jsx("span",{className:"badge",children:"SQL"})]}),s.jsx("p",{className:"sub",children:e.sub})]})]}),s.jsx("span",{className:"chev",children:s.jsx(c,{})})]}),s.jsx("div",{id:`${e.id}-content`,className:`content ${a?"show":""}`,children:s.jsxs("div",{className:"inner",children:[s.jsxs("div",{className:"grid",children:[s.jsxs("div",{className:"card span12",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(r,{})}),s.jsx("h3",{className:"h3",children:"What is SQL - Structured Query Language"})]}),s.jsxs("p",{className:"p",children:[s.jsx("b",{children:"SQL"})," means"," ",s.jsx("b",{children:"Structured Query Language"}),". It is the standard language used to talk to relational databases. With SQL, you can define tables, insert and update rows, query data, and control access."]}),s.jsxs("div",{className:"mini",children:[s.jsx("span",{className:"pill",children:"Define"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Insert"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Query"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Control"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Commit"})]}),s.jsx("p",{className:"note",children:"SQL is declarative. You tell what you want, the database figures out how to do it."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(t,{})}),s.jsx("h3",{className:"h3",children:"DDL - Data Definition Language"})]}),s.jsx("p",{className:"p",children:"DDL is used to create and modify database structure like tables and columns."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"CREATE"}),s.jsxs("div",{className:"v",children:["Creates objects like tables, indexes, views.",s.jsx("span",{className:"small",children:"Example: create table users (...)"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"ALTER"}),s.jsxs("div",{className:"v",children:["Modifies structure of existing objects.",s.jsx("span",{className:"small",children:"Example: add a column, change datatype"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"DROP"}),s.jsxs("div",{className:"v",children:["Deletes objects permanently.",s.jsx("span",{className:"small",children:"Example: drop table users"})]})]})]}),s.jsx("p",{className:"note",children:"DDL changes schema. Many DBs auto-commit DDL."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(d,{})}),s.jsx("h3",{className:"h3",children:"DML - Data Manipulation Language"})]}),s.jsx("p",{className:"p",children:"DML is used to change actual data inside tables. It works on rows."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"INSERT"}),s.jsxs("div",{className:"v",children:["Adds new rows to a table.",s.jsx("span",{className:"small",children:"Example: insert into users values (...)"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"UPDATE"}),s.jsxs("div",{className:"v",children:["Modifies existing rows.",s.jsx("span",{className:"small",children:"Example: update users set name='A' where id=1"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"DELETE"}),s.jsxs("div",{className:"v",children:["Removes rows from a table.",s.jsx("span",{className:"small",children:"Example: delete from users where id=1"})]})]})]}),s.jsx("p",{className:"note",children:"DML is usually controlled by transactions. You can rollback if not committed."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(p,{})}),s.jsx("h3",{className:"h3",children:"DQL - Data Query Language"})]}),s.jsx("p",{className:"p",children:"DQL is used to read data from tables. The core command is SELECT."}),s.jsx("div",{className:"kvs",children:s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"SELECT"}),s.jsxs("div",{className:"v",children:["Fetches rows and columns from one or more tables.",s.jsx("span",{className:"small",children:"Example: select name from users where city='Bhopal'"})]})]})}),s.jsx("p",{className:"note",children:"Best habit: always start with a WHERE clause in mind to avoid full table scans."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(x,{})}),s.jsx("h3",{className:"h3",children:"TCL - Transaction Control Language"})]}),s.jsx("p",{className:"p",children:"TCL manages transactions. It decides when your changes become permanent or when to undo them."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"COMMIT"}),s.jsx("div",{className:"v",children:"Makes changes permanent in the database."})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"ROLLBACK"}),s.jsx("div",{className:"v",children:"Undoes changes since last commit or savepoint."})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"SAVEPOINT"}),s.jsx("div",{className:"v",children:"Creates a named point inside a transaction to rollback partially."})]})]}),s.jsx("p",{className:"note",children:"Think of SAVEPOINT like a checkpoint inside one transaction."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(m,{})}),s.jsx("h3",{className:"h3",children:"DCL - Data Control Language"})]}),s.jsx("p",{className:"p",children:"DCL controls permissions. It decides who can read, write, or manage database objects."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"GRANT"}),s.jsxs("div",{className:"v",children:["Gives permissions to a user or role.",s.jsx("span",{className:"small",children:"Example: grant select on users to analystRole"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"REVOKE"}),s.jsxs("div",{className:"v",children:["Removes previously granted permissions.",s.jsx("span",{className:"small",children:"Example: revoke insert on users from tempUser"})]})]})]}),s.jsx("p",{className:"note",children:"DCL is critical in production to prevent accidental data damage."})]})]}),s.jsxs("div",{className:"bottomNote",children:[s.jsx("div",{className:"bnIcon",children:s.jsx(r,{})}),s.jsxs("div",{className:"bnText",children:[s.jsx("div",{className:"bnTitle",children:"Quick memory"}),s.jsx("div",{className:"bnSub",children:"DDL defines structure, DML changes rows, DQL reads, TCL controls commit and rollback, DCL controls permissions."})]})]})]})})]})};export{g as default};

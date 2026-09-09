@@ -1,4 +1,4 @@
-import{c as n,r as i,j as s,t as r,d as c,u as t,v as d,w as p,x,b as m}from"./index-D5IfMMY7.js";const h={Wrapper:n.section`
+import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./index-Mc0Xt7Eb.js";const h={Wrapper:t.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -306,6 +306,22 @@ import{c as n,r as i,j as s,t as r,d as c,u as t,v as d,w as p,x,b as m}from"./i
             user-select: none;
         }
 
+        .list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .list li {
+            color: var(--color-text-secondary);
+            font-size: 13.5px;
+            line-height: 1.55;
+        }
+
+        .list b {
+            color: var(--color-text-primary);
+            font-weight: 900;
+        }
+
         .kvs {
             display: grid;
             gap: 10px;
@@ -314,7 +330,7 @@ import{c as n,r as i,j as s,t as r,d as c,u as t,v as d,w as p,x,b as m}from"./i
 
         .kv {
             display: grid;
-            grid-template-columns: 110px 1fr;
+            grid-template-columns: 160px 1fr;
             gap: 10px;
             padding: 10px;
             border-radius: 14px;
@@ -346,14 +362,39 @@ import{c as n,r as i,j as s,t as r,d as c,u as t,v as d,w as p,x,b as m}from"./i
             line-height: 1.5;
         }
 
-        .list {
-            display: grid;
-            gap: 10px;
+        .tree {
+            margin-top: 10px;
+            border-radius: 14px;
+            border: 1px solid var(--color-border);
+            background: color-mix(
+                in srgb,
+                var(--color-surface-2) 76%,
+                transparent
+            );
+            overflow: hidden;
         }
 
-        .list li {
+        .tRow {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 10px;
+            padding: 10px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .tRow:first-child {
+            border-top: 0;
+        }
+
+        .tLabel {
+            color: var(--color-text-primary);
+            font-weight: 900;
+            font-size: 13px;
+        }
+
+        .tVal {
             color: var(--color-text-secondary);
-            font-size: 13.5px;
+            font-size: 13px;
             line-height: 1.55;
         }
 
@@ -415,5 +456,9 @@ import{c as n,r as i,j as s,t as r,d as c,u as t,v as d,w as p,x,b as m}from"./i
             .kv {
                 grid-template-columns: 1fr;
             }
+
+            .tRow {
+                grid-template-columns: 1fr;
+            }
         }
-    `},g=()=>{const[a,l]=i.useState(!0),e=i.useMemo(()=>({id:"sqlBasics",title:"SQL Basics",sub:"SQL meaning and the 5 command groups - DDL, DML, DQL, TCL, DCL, with common commands and examples."}),[]);return s.jsxs(h.Wrapper,{id:e.id,children:[s.jsxs("button",{type:"button",className:`head ${a?"open":""}`,onClick:()=>l(o=>!o),"aria-expanded":a,"aria-controls":`${e.id}-content`,children:[s.jsxs("div",{className:"left",children:[s.jsx("span",{className:"icon",children:s.jsx(r,{})}),s.jsxs("div",{className:"text",children:[s.jsxs("div",{className:"titleRow",children:[s.jsx("h2",{className:"title",children:e.title}),s.jsx("span",{className:"badge",children:"SQL"})]}),s.jsx("p",{className:"sub",children:e.sub})]})]}),s.jsx("span",{className:"chev",children:s.jsx(c,{})})]}),s.jsx("div",{id:`${e.id}-content`,className:`content ${a?"show":""}`,children:s.jsxs("div",{className:"inner",children:[s.jsxs("div",{className:"grid",children:[s.jsxs("div",{className:"card span12",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(r,{})}),s.jsx("h3",{className:"h3",children:"What is SQL - Structured Query Language"})]}),s.jsxs("p",{className:"p",children:[s.jsx("b",{children:"SQL"})," means"," ",s.jsx("b",{children:"Structured Query Language"}),". It is the standard language used to talk to relational databases. With SQL, you can define tables, insert and update rows, query data, and control access."]}),s.jsxs("div",{className:"mini",children:[s.jsx("span",{className:"pill",children:"Define"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Insert"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Query"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Control"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Commit"})]}),s.jsx("p",{className:"note",children:"SQL is declarative. You tell what you want, the database figures out how to do it."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(t,{})}),s.jsx("h3",{className:"h3",children:"DDL - Data Definition Language"})]}),s.jsx("p",{className:"p",children:"DDL is used to create and modify database structure like tables and columns."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"CREATE"}),s.jsxs("div",{className:"v",children:["Creates objects like tables, indexes, views.",s.jsx("span",{className:"small",children:"Example: create table users (...)"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"ALTER"}),s.jsxs("div",{className:"v",children:["Modifies structure of existing objects.",s.jsx("span",{className:"small",children:"Example: add a column, change datatype"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"DROP"}),s.jsxs("div",{className:"v",children:["Deletes objects permanently.",s.jsx("span",{className:"small",children:"Example: drop table users"})]})]})]}),s.jsx("p",{className:"note",children:"DDL changes schema. Many DBs auto-commit DDL."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(d,{})}),s.jsx("h3",{className:"h3",children:"DML - Data Manipulation Language"})]}),s.jsx("p",{className:"p",children:"DML is used to change actual data inside tables. It works on rows."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"INSERT"}),s.jsxs("div",{className:"v",children:["Adds new rows to a table.",s.jsx("span",{className:"small",children:"Example: insert into users values (...)"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"UPDATE"}),s.jsxs("div",{className:"v",children:["Modifies existing rows.",s.jsx("span",{className:"small",children:"Example: update users set name='A' where id=1"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"DELETE"}),s.jsxs("div",{className:"v",children:["Removes rows from a table.",s.jsx("span",{className:"small",children:"Example: delete from users where id=1"})]})]})]}),s.jsx("p",{className:"note",children:"DML is usually controlled by transactions. You can rollback if not committed."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(p,{})}),s.jsx("h3",{className:"h3",children:"DQL - Data Query Language"})]}),s.jsx("p",{className:"p",children:"DQL is used to read data from tables. The core command is SELECT."}),s.jsx("div",{className:"kvs",children:s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"SELECT"}),s.jsxs("div",{className:"v",children:["Fetches rows and columns from one or more tables.",s.jsx("span",{className:"small",children:"Example: select name from users where city='Bhopal'"})]})]})}),s.jsx("p",{className:"note",children:"Best habit: always start with a WHERE clause in mind to avoid full table scans."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(x,{})}),s.jsx("h3",{className:"h3",children:"TCL - Transaction Control Language"})]}),s.jsx("p",{className:"p",children:"TCL manages transactions. It decides when your changes become permanent or when to undo them."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"COMMIT"}),s.jsx("div",{className:"v",children:"Makes changes permanent in the database."})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"ROLLBACK"}),s.jsx("div",{className:"v",children:"Undoes changes since last commit or savepoint."})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"SAVEPOINT"}),s.jsx("div",{className:"v",children:"Creates a named point inside a transaction to rollback partially."})]})]}),s.jsx("p",{className:"note",children:"Think of SAVEPOINT like a checkpoint inside one transaction."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(m,{})}),s.jsx("h3",{className:"h3",children:"DCL - Data Control Language"})]}),s.jsx("p",{className:"p",children:"DCL controls permissions. It decides who can read, write, or manage database objects."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"GRANT"}),s.jsxs("div",{className:"v",children:["Gives permissions to a user or role.",s.jsx("span",{className:"small",children:"Example: grant select on users to analystRole"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"REVOKE"}),s.jsxs("div",{className:"v",children:["Removes previously granted permissions.",s.jsx("span",{className:"small",children:"Example: revoke insert on users from tempUser"})]})]})]}),s.jsx("p",{className:"note",children:"DCL is critical in production to prevent accidental data damage."})]})]}),s.jsxs("div",{className:"bottomNote",children:[s.jsx("div",{className:"bnIcon",children:s.jsx(r,{})}),s.jsxs("div",{className:"bnText",children:[s.jsx("div",{className:"bnTitle",children:"Quick memory"}),s.jsx("div",{className:"bnSub",children:"DDL defines structure, DML changes rows, DQL reads, TCL controls commit and rollback, DCL controls permissions."})]})]})]})})]})};export{g as default};
+    `},b=()=>{const[r,o]=i.useState(!0),s=i.useMemo(()=>({id:"indexing",title:"Indexing",sub:"What indexes are, clustered vs non-clustered, B-Tree, hash index, when to use, and trade-offs."}),[]);return e.jsxs(h.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${r?"open":""}`,onClick:()=>o(d=>!d),"aria-expanded":r,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(a,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"Performance"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(c,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${r?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"What is index"})]}),e.jsxs("p",{className:"p",children:["An ",e.jsx("b",{children:"index"})," is an extra data structure that helps the database find rows faster without scanning the entire table."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Table"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Full scan"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Slow"})]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Index"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Jump to rows"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Fast"})]}),e.jsx("p",{className:"note",children:"Index is like a book index. You jump to the page instead of reading every page."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"When to use index"})]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:["Columns used often in ",e.jsx("b",{children:"WHERE"})]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"JOIN"})," conditions"]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"ORDER BY"})]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"GROUP BY"})," (sometimes)"]}),e.jsx("li",{children:"Columns with high selectivity (many unique values)"})]}),e.jsx("p",{className:"note",children:"Index helps when it reduces scanned rows a lot. Index is less useful when most rows match."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(n,{})}),e.jsx("h3",{className:"h3",children:"Clustered index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"clustered index"})," decides the physical order of rows on disk based on the indexed column. The table data is stored in the same order as the clustered key."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"How many"}),e.jsxs("div",{className:"v",children:["Usually ",e.jsx("b",{children:"one"})," per table, because rows can be stored physically in one order only."]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Best for"}),e.jsxs("div",{className:"v",children:["Range queries like",e.jsx("span",{className:"small",children:'"WHERE createdAt BETWEEN A AND B"'})]})]})]}),e.jsx("p",{className:"note",children:"Many databases make primary key clustered by default, but not always."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(n,{})}),e.jsx("h3",{className:"h3",children:"Non-clustered index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"non-clustered index"})," is a separate structure that stores index keys and pointers to the actual table rows. Table rows are not stored in index order."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"How many"}),e.jsx("div",{className:"v",children:"Multiple can exist on the same table."})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Best for"}),e.jsx("div",{className:"v",children:"Fast lookups on frequently filtered columns."})]})]}),e.jsx("p",{className:"note",children:"It is like having multiple indexes in a book for different topics."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"B-Tree"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"B-Tree"})," is the most common index structure in relational databases. It stays balanced so searching is fast. It supports both equality and range queries efficiently."]}),e.jsxs("div",{className:"tree",children:[e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Good for"}),e.jsx("span",{className:"tVal",children:'"=", "<", ">", BETWEEN, ORDER BY'})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Why"}),e.jsx("span",{className:"tVal",children:"Balanced tree means fewer disk reads while searching"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Common use"}),e.jsx("span",{className:"tVal",children:"Primary keys, createdAt sorting, range filters"})]})]}),e.jsx("p",{className:"note",children:"In interviews, just remember this: B-Tree is default because it handles many query types well."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"Hash index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"hash index"})," uses a hash function to map a key to a bucket. It is very fast for equality lookups."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Great for"}),e.jsx("div",{className:"v",children:'Equality - "WHERE id = 10"'})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Bad for"}),e.jsxs("div",{className:"v",children:["Range queries and sorting",e.jsx("span",{className:"small",children:"Example: BETWEEN, ORDER BY"})]})]})]}),e.jsx("p",{className:"note",children:"Hash indexes are not always available in all engines for all table types."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Trade-offs"})]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:[e.jsx("b",{children:"Faster reads"})," but ",e.jsx("b",{children:"slower writes"})," ","because index must be updated on INSERT, UPDATE, DELETE"]}),e.jsxs("li",{children:["Uses extra ",e.jsx("b",{children:"storage"})]}),e.jsx("li",{children:"Too many indexes can slow down write-heavy systems"}),e.jsx("li",{children:"Wrong indexes do nothing but still cost space and update time"}),e.jsx("li",{children:"Index maintenance can increase complexity"})]}),e.jsx("p",{className:"note",children:"Rule: index what you search and join on often. Avoid indexing everything blindly."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"B-Tree is general purpose. Hash is equality only. Index speeds reads but adds write and storage cost."})]})]})]})})]})};export{b as default};

@@ -1,4 +1,4 @@
-import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}from"./index-D5IfMMY7.js";const m={Wrapper:t.section`
+import{c as d,r as l,j as e,i,d as c,a as o,m as x,s as p,o as a,q as m}from"./index-Mc0Xt7Eb.js";const h={Wrapper:d.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -253,12 +253,6 @@ import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}fro
             flex: 0 0 auto;
         }
 
-        .cIcon.warn {
-            color: var(--color-warning);
-            box-shadow: 0 0 0 4px
-                color-mix(in srgb, var(--color-warning) 10%, transparent);
-        }
-
         .cIcon svg {
             width: 18px;
             height: 18px;
@@ -312,15 +306,34 @@ import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}fro
             user-select: none;
         }
 
-        .list {
-            display: grid;
-            gap: 10px;
+        .ex {
+            margin-top: 10px;
+            border-radius: 14px;
+            border: 1px solid var(--color-border);
+            background: color-mix(
+                in srgb,
+                var(--color-surface-2) 78%,
+                transparent
+            );
+            padding: 10px;
         }
 
-        .list li {
-            color: var(--color-text-secondary);
-            font-size: 13.5px;
-            line-height: 1.55;
+        .exTitle {
+            font-weight: 900;
+            color: var(--color-text-primary);
+            font-size: 12.5px;
+            margin-bottom: 6px;
+        }
+
+        .code {
+            font-family:
+                ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                "Liberation Mono", "Courier New", monospace;
+            font-size: 12.5px;
+            color: var(--color-text-primary);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-break: break-word;
         }
 
         .kvs {
@@ -363,60 +376,69 @@ import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}fro
             line-height: 1.5;
         }
 
-        .badGood {
+        .keysGrid {
+            margin-top: 10px;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(12, 1fr);
             gap: 10px;
-            margin: 10px 0 10px;
         }
 
-        .bgCard {
-            border-radius: 14px;
+        .kCard {
+            grid-column: span 6;
+            border-radius: 16px;
             border: 1px solid var(--color-border);
             background: color-mix(
                 in srgb,
                 var(--color-surface-2) 78%,
                 transparent
             );
-            padding: 10px;
+            padding: 12px;
         }
 
-        .bgCard.bad {
-            box-shadow: 0 0 0 4px
-                color-mix(in srgb, var(--color-error) 10%, transparent);
-        }
-
-        .bgCard.good {
-            box-shadow: 0 0 0 4px
-                color-mix(in srgb, var(--color-success) 10%, transparent);
-        }
-
-        .bgTitle {
+        .kTitle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-weight: 900;
             color: var(--color-text-primary);
-            font-size: 12.5px;
             margin-bottom: 6px;
+            font-size: 13px;
         }
 
-        .bgText {
-            color: var(--color-text-secondary);
-            font-size: 12.8px;
-            line-height: 1.5;
-            margin-bottom: 8px;
-        }
-
-        .bgMono {
+        .kIcon {
+            width: 30px;
+            height: 30px;
             border-radius: 12px;
-            border: 1px solid var(--color-code-border);
-            background: var(--color-code-bg);
-            padding: 10px;
-            color: var(--color-text-primary);
-            font-size: 12.5px;
-            line-height: 1.45;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--color-border);
+            background: color-mix(
+                in srgb,
+                var(--color-surface) 86%,
+                transparent
+            );
+            color: var(--color-primary);
+            flex: 0 0 auto;
+        }
+
+        .kIcon svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .kBody {
+            color: var(--color-text-secondary);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .kEx {
+            margin-top: 6px;
             font-family:
                 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
                 "Liberation Mono", "Courier New", monospace;
-            overflow-x: auto;
+            font-size: 12.3px;
+            color: var(--color-text-muted);
         }
 
         .bottomNote {
@@ -474,12 +496,12 @@ import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}fro
                 grid-column: span 12;
             }
 
-            .badGood {
-                grid-template-columns: 1fr;
-            }
-
             .kv {
                 grid-template-columns: 1fr;
             }
+
+            .kCard {
+                grid-column: span 12;
+            }
         }
-    `},b=()=>{const[a,o]=i.useState(!0),r=i.useMemo(()=>({id:"securityInDbms",title:"Security in DBMS",sub:"Authentication, authorization, roles, encryption at rest and in transit, and SQL injection basics."}),[]);return e.jsxs(m.Wrapper,{id:r.id,children:[e.jsxs("button",{type:"button",className:`head ${a?"open":""}`,onClick:()=>o(n=>!n),"aria-expanded":a,"aria-controls":`${r.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(s,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:r.title}),e.jsx("span",{className:"badge",children:"Must know"})]}),e.jsx("p",{className:"sub",children:r.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(l,{})})]}),e.jsx("div",{id:`${r.id}-content`,className:`content ${a?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(c,{})}),e.jsx("h3",{className:"h3",children:"Authentication"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Authentication"}),' means verifying identity. DBMS checks "who you are" before allowing access.']}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Common methods - password, certificate, token, SSO (Single Sign-On)"}),e.jsx("li",{children:"Good practice - strong passwords, rotate credentials, use MFA (Multi-Factor Authentication)"})]}),e.jsx("p",{className:"note",children:"Memory: authentication is identity proof."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"Authorization"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Authorization"}),' means permissions. DBMS decides "what you can do" after you are authenticated.']}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"READ"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"WRITE"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"ADMIN"})]}),e.jsx("p",{className:"note",children:"Memory: authorization is allowed actions."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Roles"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"role"})," is a named set of permissions. Instead of giving permissions to each user one by one, assign a role to a user."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Why roles"}),e.jsx("div",{className:"v",children:"Easier management, less mistakes, consistent access control."})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Examples"}),e.jsxs("div",{className:"v",children:["reader role - only SELECT",e.jsx("span",{className:"small",children:"writer role - SELECT + INSERT + UPDATE"}),e.jsx("span",{className:"small",children:"admin role - schema changes + user management"})]})]})]}),e.jsx("p",{className:"note",children:"Follow least privilege: give only the permissions needed for the job."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Encryption at rest"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Encryption at rest"})," means encrypting data stored on disk. If someone steals the database files or disk snapshot, they cannot read it without the key."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Applies to - data files, backups, snapshots"}),e.jsx("li",{children:"Common approach - TDE (Transparent Data Encryption)"}),e.jsx("li",{children:"Key management matters - keep keys separate from data"})]}),e.jsx("p",{className:"note",children:"At rest protects storage. It does not protect data while travelling on the network."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(s,{})}),e.jsx("h3",{className:"h3",children:"Encryption in transit"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Encryption in transit"})," means encrypting data while it moves between client and DB server, or between DB nodes. This prevents sniffing and man-in-the-middle attacks."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"TLS"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"SSL"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Certificates"})]}),e.jsx("p",{className:"note",children:"Use TLS. SSL term is still used, but modern setups are TLS based."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon warn",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"SQL injection basics"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"SQL injection"})," is an attack where an attacker tricks your app into running unintended SQL by injecting input into a query string. This can leak data, bypass login, or even delete tables."]}),e.jsxs("div",{className:"badGood",children:[e.jsxs("div",{className:"bgCard bad",children:[e.jsx("div",{className:"bgTitle",children:"Bad pattern"}),e.jsx("div",{className:"bgText",children:"Building SQL by string concatenation with user input."}),e.jsx("div",{className:"bgMono",children:'SELECT * FROM users WHERE email = " + userEmail'})]}),e.jsxs("div",{className:"bgCard good",children:[e.jsx("div",{className:"bgTitle",children:"Good pattern"}),e.jsx("div",{className:"bgText",children:"Use parameterized queries or prepared statements."}),e.jsx("div",{className:"bgMono",children:"SELECT * FROM users WHERE email = ?"})]})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Always use prepared statements and parameterized queries"}),e.jsx("li",{children:"Validate input types and lengths"}),e.jsx("li",{children:"Use least privilege DB users for apps"}),e.jsx("li",{children:"Avoid showing raw SQL errors to users"})]}),e.jsx("p",{className:"note",children:"Most SQL injection happens at application layer, not inside the DBMS itself."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(s,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Authentication - who you are. Authorization - what you can do. Encrypt disk and network. Prevent SQL injection with parameters."})]})]})]})})]})};export{b as default};
+    `},v=()=>{const[r,n]=l.useState(!0),s=l.useMemo(()=>({id:"relationalModel",title:"Relational Model",sub:"Relation, tuple, attribute, domain, degree, cardinality, and the full key family used in RDBMS."}),[]);return e.jsxs(h.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${r?"open":""}`,onClick:()=>n(t=>!t),"aria-expanded":r,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(i,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"Tables and Keys"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(c,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${r?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(i,{})}),e.jsx("h3",{className:"h3",children:"Relation"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"relation"})," is a table in the relational model. It stores data as rows and columns."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("div",{className:"code",children:"STUDENT(studentId, name, email)"})]}),e.jsx("p",{className:"note",children:"Relation name is like the table name, and attributes are the column names."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Tuple"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"tuple"})," is a single row in a relation. It represents one record."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example row"}),e.jsx("div",{className:"code",children:'(101, "Ashish", "ash@example.com")'})]})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Attribute"})]}),e.jsxs("p",{className:"p",children:["An ",e.jsx("b",{children:"attribute"})," is a column in a table. It describes a property of the entity."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"studentId"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"name"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"email"})]}),e.jsx("p",{className:"note",children:"Attribute values come from a defined domain."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Domain"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"domain"})," is the allowed set of values for an attribute. It defines type and constraints."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Example"}),e.jsxs("div",{className:"v",children:["age domain could be 0 to 120",e.jsx("span",{className:"small",children:"integer values only"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Example"}),e.jsxs("div",{className:"v",children:["email domain could be valid email strings",e.jsx("span",{className:"small",children:'must contain "@"'})]})]})]}),e.jsx("p",{className:"note",children:"Domain helps ensure data correctness at the attribute level."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(i,{})}),e.jsx("h3",{className:"h3",children:"Degree"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Degree"})," is the number of attributes (columns) in a relation."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("div",{className:"code",children:"STUDENT(studentId, name, email) - degree is 3"})]})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Cardinality"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Cardinality"})," is the number of tuples (rows) in a relation."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("div",{className:"code",children:"STUDENT has 500 rows - cardinality is 500"})]}),e.jsx("p",{className:"note",children:"Do not confuse this with ER diagram cardinality like 1:N. Here it means row count."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"Keys in DBMS"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"key"})," is a set of attributes that identifies a tuple uniquely or helps connect tables correctly. Different keys serve different purposes."]}),e.jsxs("div",{className:"keysGrid",children:[e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(a,{})}),"Super key"]}),e.jsxs("div",{className:"kBody",children:["Any attribute set that uniquely identifies a row. It can include extra attributes.",e.jsx("div",{className:"kEx",children:"Example: (studentId) or (studentId, email)"})]})]}),e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(a,{})}),"Candidate key"]}),e.jsxs("div",{className:"kBody",children:["Minimal super key. No extra attributes. There can be multiple candidate keys.",e.jsx("div",{className:"kEx",children:"Example: (studentId) and (email) if both are unique"})]})]}),e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(a,{})}),"Primary key"]}),e.jsxs("div",{className:"kBody",children:["One selected candidate key used as main identifier. It cannot be NULL and should be stable.",e.jsx("div",{className:"kEx",children:"Example: studentId"})]})]}),e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(a,{})}),"Alternate key"]}),e.jsxs("div",{className:"kBody",children:["Candidate keys not chosen as primary key. Still unique.",e.jsx("div",{className:"kEx",children:"Example: email"})]})]}),e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(m,{})}),"Foreign key"]}),e.jsxs("div",{className:"kBody",children:["Attribute in one table that references primary key of another table. It builds relationships.",e.jsx("div",{className:"kEx",children:"Example: ENROLLMENT.studentId references STUDENT.studentId"})]})]}),e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(o,{})}),"Composite key"]}),e.jsxs("div",{className:"kBody",children:["Key made of 2 or more attributes. Used when one attribute is not enough.",e.jsx("div",{className:"kEx",children:"Example: (studentId, courseId) in ENROLLMENT"})]})]})]}),e.jsx("p",{className:"note",children:"Memory: super key identifies, candidate key is minimal, primary key is chosen, alternate key is remaining, foreign key links, composite key is multi-column."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Degree is columns, cardinality is rows. Candidate keys are minimal unique sets, and one becomes primary key."})]})]})]})})]})};export{v as default};
