@@ -1,4 +1,4 @@
-import{c as t,r as i,j as e,K as a,d as c,a as p,L as x,g as o,M as l,b as h}from"./index-B13LwCCT.js";const m={Wrapper:t.section`
+import{c as t,r as i,j as e,w as a,d as l,N as c,O as d,P as p,J as x}from"./index-D5IfMMY7.js";const h={Wrapper:t.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -42,7 +42,6 @@ import{c as t,r as i,j as e,K as a,d as c,a as p,L as x,g as o,M as l,b as h}fro
             opacity: 0.95;
         }
 
-        /* subtle table grid texture */
         .head::after {
             content: "";
             position: absolute;
@@ -303,6 +302,54 @@ import{c as t,r as i,j as e,K as a,d as c,a as p,L as x,g as o,M as l,b as h}fro
             opacity: 0.9;
         }
 
+        .steps {
+            display: grid;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 28px 1fr;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 14px;
+            border: 1px solid var(--color-border);
+            background: color-mix(
+                in srgb,
+                var(--color-surface-2) 78%,
+                transparent
+            );
+        }
+
+        .n {
+            width: 26px;
+            height: 26px;
+            border-radius: 999px;
+            display: grid;
+            place-items: center;
+            font-weight: 900;
+            font-size: 12px;
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-border);
+            background: color-mix(
+                in srgb,
+                var(--color-primary) 18%,
+                transparent
+            );
+        }
+
+        .t {
+            color: var(--color-text-secondary);
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .t b {
+            color: var(--color-text-primary);
+            font-weight: 900;
+        }
+
         .kvs {
             display: grid;
             gap: 10px;
@@ -311,7 +358,7 @@ import{c as t,r as i,j as e,K as a,d as c,a as p,L as x,g as o,M as l,b as h}fro
 
         .kv {
             display: grid;
-            grid-template-columns: 140px 1fr;
+            grid-template-columns: 120px 1fr;
             gap: 10px;
             padding: 10px;
             border-radius: 14px;
@@ -341,6 +388,36 @@ import{c as t,r as i,j as e,K as a,d as c,a as p,L as x,g as o,M as l,b as h}fro
             color: var(--color-text-muted);
             font-size: 12.5px;
             line-height: 1.5;
+        }
+
+        .ex {
+            margin-top: 10px;
+            border-radius: 14px;
+            border: 1px solid var(--color-border);
+            background: color-mix(
+                in srgb,
+                var(--color-surface-2) 78%,
+                transparent
+            );
+            padding: 10px;
+        }
+
+        .exTitle {
+            font-weight: 900;
+            color: var(--color-text-primary);
+            font-size: 12.5px;
+            margin-bottom: 6px;
+        }
+
+        .exList {
+            display: grid;
+            gap: 6px;
+        }
+
+        .exList li {
+            color: var(--color-text-secondary);
+            font-size: 13px;
+            line-height: 1.45;
         }
 
         .compare {
@@ -387,46 +464,48 @@ import{c as t,r as i,j as e,K as a,d as c,a as p,L as x,g as o,M as l,b as h}fro
             line-height: 1.5;
         }
 
-        .steps {
+        .warn {
             margin-top: 10px;
-            display: grid;
-            gap: 8px;
-        }
-
-        .step {
-            display: grid;
-            grid-template-columns: 36px 1fr;
-            gap: 10px;
-            padding: 10px;
             border-radius: 14px;
             border: 1px solid var(--color-border);
             background: color-mix(
                 in srgb,
-                var(--color-surface-2) 78%,
+                var(--color-surface) 84%,
                 transparent
             );
+            padding: 10px;
         }
 
-        .n {
-            width: 30px;
-            height: 30px;
-            border-radius: 12px;
-            display: grid;
-            place-items: center;
-            border: 1px solid var(--color-border);
-            background: color-mix(
-                in srgb,
-                var(--color-surface) 86%,
-                transparent
-            );
-            color: var(--color-primary);
+        .wTitle {
             font-weight: 900;
+            color: var(--color-text-primary);
+            font-size: 12.5px;
+            margin-bottom: 6px;
         }
 
-        .t {
+        .wList {
+            display: grid;
+            gap: 6px;
+        }
+
+        .wList li {
             color: var(--color-text-secondary);
             font-size: 13px;
-            line-height: 1.55;
+            line-height: 1.45;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .wList li::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--color-accent);
+            position: absolute;
+            left: 0;
+            top: 8px;
+            opacity: 0.9;
         }
 
         .bottomNote {
@@ -491,9 +570,5 @@ import{c as t,r as i,j as e,K as a,d as c,a as p,L as x,g as o,M as l,b as h}fro
             .row {
                 grid-template-columns: 1fr;
             }
-
-            .step {
-                grid-template-columns: 1fr;
-            }
         }
-    `},b=()=>{const[r,n]=i.useState(!0),s=i.useMemo(()=>({id:"storageAndArchitecture",title:"Storage and Architecture",sub:"Disk basics, pages and blocks, buffer pool, record storage, files, logs, and WAL."}),[]);return e.jsxs(m.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${r?"open":""}`,onClick:()=>n(d=>!d),"aria-expanded":r,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(a,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"Engine basics"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(c,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${r?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"Disk storage basics"})]}),e.jsxs("p",{className:"p",children:["Databases store data on"," ",e.jsx("b",{children:"persistent storage"}),"like SSD or HDD so it survives restarts. Disk is much slower than RAM, so databases try to do fewer disk reads and writes."]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:[e.jsx("b",{children:"RAM"})," - very fast, but data is lost on power off"]}),e.jsxs("li",{children:[e.jsx("b",{children:"Disk"})," - slower, but data stays safe after restart"]}),e.jsx("li",{children:"DB engines batch writes and use caching to reduce disk access"})]}),e.jsx("p",{className:"note",children:"Simple mental model: disk is safe but slow, memory is fast but temporary."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Pages and blocks"})]}),e.jsxs("p",{className:"p",children:["Databases do not read single rows directly from disk. They read fixed-size chunks called"," ",e.jsx("b",{children:"pages"}),". On disk, these chunks are often called ",e.jsx("b",{children:"blocks"}),"."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Page"}),e.jsxs("div",{className:"v",children:["Fixed-size unit of storage used by the DB engine.",e.jsx("span",{className:"small",children:"Example sizes: 4KB, 8KB, 16KB depending on DB"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Block"}),e.jsx("div",{className:"v",children:"Disk level term for a chunk of data. Often maps closely to a page."})]})]}),e.jsx("p",{className:"note",children:"If one row is needed, the whole page containing that row is loaded into memory."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Buffer pool"})]}),e.jsxs("p",{className:"p",children:["The ",e.jsx("b",{children:"buffer pool"})," is a memory area where the DB keeps recently used pages. It is basically the database cache."]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:["If a needed page is in buffer pool, it is a"," ",e.jsx("b",{children:"cache hit"})]}),e.jsxs("li",{children:["If not, it is a ",e.jsx("b",{children:"cache miss"})," and DB reads from disk"]}),e.jsx("li",{children:"When buffer pool is full, DB evicts old pages using a policy like LRU style"})]}),e.jsx("p",{className:"note",children:"Bigger buffer pool usually means fewer disk reads and faster queries."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Record storage"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"record"})," is a stored row of a table. Inside a page, records are stored with metadata so the DB can find them quickly."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Rows may have fixed-length and variable-length fields"}),e.jsx("li",{children:"Pages often maintain a slot directory to locate records"}),e.jsx("li",{children:"Updates can create fragmentation, DB may reorganize pages"})]}),e.jsx("p",{className:"note",children:"You do not need page internals for interviews, just know records live inside pages."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"Heap file"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"heap file"})," stores records in no specific order. New records are placed wherever space is available."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Fast inserts"}),e.jsx("li",{children:"Search can be slow without an index"}),e.jsx("li",{children:"Common base storage method for tables"})]}),e.jsx("p",{className:"note",children:"Heap does not mean heap memory. It just means unordered file storage."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"Sequential file"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"sequential file"})," stores records in a sorted order based on a key like an id or timestamp."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Good for range queries and ordered scanning"}),e.jsx("li",{children:"Insert and delete can be slower because order must be maintained"}),e.jsx("li",{children:"Often used for logs or data files designed for sequential reads"})]}),e.jsx("p",{className:"note",children:"Think: sequential is scan-friendly, heap is insert-friendly."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Log file"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"log file"})," records changes made by transactions. It is used for crash recovery to restore a consistent state. Logs are usually written sequentially, which is fast on disk."]}),e.jsxs("div",{className:"compare",children:[e.jsxs("div",{className:"row head",children:[e.jsx("div",{children:"Data file"}),e.jsx("div",{children:"Log file"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Stores actual table data pages and index pages"}),e.jsx("div",{children:"Stores change history and transaction actions"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Random reads and writes based on queries"}),e.jsx("div",{children:"Mostly sequential writes"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Used for normal query reads"}),e.jsx("div",{children:"Used mainly for recovery and durability"})]})]}),e.jsx("p",{className:"note",children:"Logging is a key reason databases can recover after a crash without losing committed transactions."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"Write-ahead logging - WAL"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"WAL"})," means ",e.jsx("b",{children:"Write-Ahead Logging"}),". Rule: write the log record to disk before writing the data page to disk. This ensures durability and correct recovery."]}),e.jsxs("div",{className:"steps",children:[e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"n",children:"1"}),e.jsx("div",{className:"t",children:"Transaction updates a row in memory"})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"n",children:"2"}),e.jsx("div",{className:"t",children:"DB writes the change into the log file on disk"})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"n",children:"3"}),e.jsx("div",{className:"t",children:"Later, DB writes the actual data page to disk"})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"n",children:"4"}),e.jsx("div",{className:"t",children:"On crash, DB replays logs to redo committed changes and undo incomplete ones"})]})]}),e.jsx("p",{className:"note",children:"WAL makes commits reliable even if data pages are flushed later."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Disk stores pages. Buffer pool caches pages. Logs record changes. WAL means log first, data later."})]})]})]})})]})};export{b as default};
+    `},g=()=>{const[s,o]=i.useState(!0),r=i.useMemo(()=>({id:"queryProcessingOptimization",title:"Query Processing and Optimization",sub:"How SQL becomes an execution plan, how the optimizer chooses paths, and why indexes change performance."}),[]);return e.jsxs(h.Wrapper,{id:r.id,children:[e.jsxs("button",{type:"button",className:`head ${s?"open":""}`,onClick:()=>o(n=>!n),"aria-expanded":s,"aria-controls":`${r.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(a,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:r.title}),e.jsx("span",{className:"badge",children:"Optimizer"})]}),e.jsx("p",{className:"sub",children:r.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(l,{})})]}),e.jsx("div",{id:`${r.id}-content`,className:`content ${s?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"Query parsing"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Query parsing"})," is the first step where the DBMS reads your SQL, checks syntax, checks that tables and columns exist, and builds an internal representation of the query."]}),e.jsxs("div",{className:"steps",children:[e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"n",children:"1"}),e.jsxs("div",{className:"t",children:[e.jsx("b",{children:"Lexing"})," - breaks SQL into tokens like SELECT, FROM, column names"]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"n",children:"2"}),e.jsxs("div",{className:"t",children:[e.jsx("b",{children:"Parsing"})," - creates a parse tree (structure of the query)"]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"n",children:"3"}),e.jsxs("div",{className:"t",children:[e.jsx("b",{children:"Validation"})," - checks schema, types, permissions"]})]})]}),e.jsx("p",{className:"note",children:'Output of parsing is not yet "how to run" it, it is "what you asked".'})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(c,{})}),e.jsx("h3",{className:"h3",children:"Query plan"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"query plan"})," is the DBMS decision of how to execute the query. It is a tree of operations like scans, filters, joins, sorts, and aggregations."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Scan"}),e.jsxs("div",{className:"v",children:["Read rows from a table or index",e.jsx("span",{className:"small",children:"Table scan or index scan"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Join"}),e.jsxs("div",{className:"v",children:["Combine rows from multiple tables",e.jsx("span",{className:"small",children:"Hash join, nested loop join, merge join"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Sort"}),e.jsx("div",{className:"v",children:"Order results, often needed for ORDER BY or merge join"})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Aggregate"}),e.jsx("div",{className:"v",children:"GROUP BY calculations like COUNT, SUM"})]})]}),e.jsx("p",{className:"note",children:"Same SQL can have many possible plans. Optimizer picks one."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"Cost-based optimization"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Cost-based optimization"})," means the DBMS estimates the cost of different plans and picks the cheapest one. Cost is not money, it means expected work like CPU, disk reads, memory, and time."]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:["Uses ",e.jsx("b",{children:"statistics"})," like row counts, distinct values, distribution"]}),e.jsx("li",{children:"Estimates selectivity of filters like WHERE conditions"}),e.jsx("li",{children:"Tries join orders and join algorithms"}),e.jsx("li",{children:"Prefers plans with fewer reads and smaller intermediate results"})]}),e.jsx("p",{className:"note",children:"If stats are outdated, optimizer can choose a bad plan. This is why ANALYZE or stats refresh matters."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Execution plan basics"})]}),e.jsxs("p",{className:"p",children:["An ",e.jsx("b",{children:"execution plan"})," is the final plan that the DBMS actually runs. Most databases let you view it using EXPLAIN or EXPLAIN ANALYZE."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"What you usually see"}),e.jsxs("ul",{className:"exList",children:[e.jsxs("li",{children:[e.jsx("b",{children:"Node types"})," like Seq Scan, Index Scan, Hash Join"]}),e.jsxs("li",{children:[e.jsx("b",{children:"Estimated rows"})," vs actual rows"]}),e.jsxs("li",{children:[e.jsx("b",{children:"Costs"})," like startup cost and total cost"]}),e.jsxs("li",{children:[e.jsx("b",{children:"Time"})," and buffers in real run (ANALYZE)"]})]})]}),e.jsx("p",{className:"note",children:"Reading plans is a skill. Always check which step produces the biggest row explosion."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Why indexes change performance"})]}),e.jsxs("p",{className:"p",children:["An ",e.jsx("b",{children:"index"})," is like a book index. Instead of scanning every row, the DBMS can jump to matching rows faster. This can reduce disk reads massively, especially for large tables."]}),e.jsxs("div",{className:"compare",children:[e.jsxs("div",{className:"row head",children:[e.jsx("div",{children:"Without index"}),e.jsx("div",{children:"With index"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"DBMS may do a full table scan and check every row"}),e.jsx("div",{children:"DBMS can do an index scan and fetch only matching rows"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Faster only for small tables, but becomes slow as table grows"}),e.jsx("div",{children:"Big speedup when filter selects few rows out of many"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Sorting may be needed for ORDER BY"}),e.jsx("div",{children:"Index order can remove sorting in some cases"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Joins may scan many rows first"}),e.jsx("div",{children:"Index can speed up joins on keys (like foreign key joins)"})]})]}),e.jsxs("div",{className:"warn",children:[e.jsx("div",{className:"wTitle",children:"Index trade-offs"}),e.jsxs("ul",{className:"wList",children:[e.jsx("li",{children:"Indexes make reads faster but writes slower (INSERT, UPDATE, DELETE must update index too)"}),e.jsx("li",{children:"Too many indexes increase storage and maintenance cost"}),e.jsx("li",{children:"Index helps only if it matches the query pattern (columns and order matter)"})]})]}),e.jsx("p",{className:"note",children:"Simple memory: index helps when you search small part of a big table."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"SQL becomes a plan. Optimizer picks cheapest path using stats. Indexes reduce scanning but add write cost."})]})]})]})})]})};export{g as default};

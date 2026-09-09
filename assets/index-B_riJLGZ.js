@@ -1,4 +1,4 @@
-import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./index-B13LwCCT.js";const h={Wrapper:t.section`
+import{c,r as i,j as e,F as a,d as t,Q as d,a as o,R as p,g as x,i as h,h as m}from"./index-D5IfMMY7.js";const g={Wrapper:c.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -317,22 +317,52 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
             line-height: 1.55;
         }
 
-        .list b {
-            color: var(--color-text-primary);
-            font-weight: 900;
-        }
-
-        .kvs {
-            display: grid;
-            gap: 10px;
+        .compare {
+            border-radius: 14px;
+            border: 1px solid var(--color-border);
+            overflow: hidden;
+            background: color-mix(
+                in srgb,
+                var(--color-surface-2) 76%,
+                transparent
+            );
             margin-top: 10px;
         }
 
-        .kv {
+        .row {
             display: grid;
-            grid-template-columns: 160px 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
             padding: 10px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .row:first-child {
+            border-top: 0;
+        }
+
+        .row.head {
+            background: color-mix(
+                in srgb,
+                var(--color-surface) 80%,
+                transparent
+            );
+        }
+
+        .row.head div {
+            color: var(--color-text-primary);
+            font-weight: 900;
+            font-size: 12.5px;
+        }
+
+        .row div {
+            color: var(--color-text-secondary);
+            font-size: 12.8px;
+            line-height: 1.5;
+        }
+
+        .ex {
+            margin-top: 10px;
             border-radius: 14px;
             border: 1px solid var(--color-border);
             background: color-mix(
@@ -340,62 +370,26 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
                 var(--color-surface-2) 78%,
                 transparent
             );
-        }
-
-        .k {
-            font-weight: 900;
-            color: var(--color-text-primary);
-            font-size: 13px;
-        }
-
-        .v {
-            color: var(--color-text-secondary);
-            font-size: 13px;
-            line-height: 1.55;
-        }
-
-        .small {
-            display: block;
-            margin-top: 3px;
-            color: var(--color-text-muted);
-            font-size: 12.5px;
-            line-height: 1.5;
-        }
-
-        .tree {
-            margin-top: 10px;
-            border-radius: 14px;
-            border: 1px solid var(--color-border);
-            background: color-mix(
-                in srgb,
-                var(--color-surface-2) 76%,
-                transparent
-            );
-            overflow: hidden;
-        }
-
-        .tRow {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 10px;
             padding: 10px;
-            border-top: 1px solid var(--color-border);
         }
 
-        .tRow:first-child {
-            border-top: 0;
-        }
-
-        .tLabel {
-            color: var(--color-text-primary);
+        .exTitle {
             font-weight: 900;
-            font-size: 13px;
+            color: var(--color-text-primary);
+            font-size: 12.5px;
+            margin-bottom: 6px;
         }
 
-        .tVal {
-            color: var(--color-text-secondary);
-            font-size: 13px;
+        .pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-family:
+                ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                "Liberation Mono", "Courier New", monospace;
+            font-size: 12.5px;
             line-height: 1.55;
+            color: var(--color-text-secondary);
         }
 
         .bottomNote {
@@ -453,12 +447,18 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
                 grid-column: span 12;
             }
 
-            .kv {
-                grid-template-columns: 1fr;
-            }
-
-            .tRow {
+            .row {
                 grid-template-columns: 1fr;
             }
         }
-    `},b=()=>{const[r,o]=i.useState(!0),s=i.useMemo(()=>({id:"indexing",title:"Indexing",sub:"What indexes are, clustered vs non-clustered, B-Tree, hash index, when to use, and trade-offs."}),[]);return e.jsxs(h.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${r?"open":""}`,onClick:()=>o(d=>!d),"aria-expanded":r,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(a,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"Performance"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(c,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${r?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"What is index"})]}),e.jsxs("p",{className:"p",children:["An ",e.jsx("b",{children:"index"})," is an extra data structure that helps the database find rows faster without scanning the entire table."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Table"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Full scan"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Slow"})]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Index"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Jump to rows"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Fast"})]}),e.jsx("p",{className:"note",children:"Index is like a book index. You jump to the page instead of reading every page."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"When to use index"})]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:["Columns used often in ",e.jsx("b",{children:"WHERE"})]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"JOIN"})," conditions"]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"ORDER BY"})]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"GROUP BY"})," (sometimes)"]}),e.jsx("li",{children:"Columns with high selectivity (many unique values)"})]}),e.jsx("p",{className:"note",children:"Index helps when it reduces scanned rows a lot. Index is less useful when most rows match."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(n,{})}),e.jsx("h3",{className:"h3",children:"Clustered index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"clustered index"})," decides the physical order of rows on disk based on the indexed column. The table data is stored in the same order as the clustered key."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"How many"}),e.jsxs("div",{className:"v",children:["Usually ",e.jsx("b",{children:"one"})," per table, because rows can be stored physically in one order only."]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Best for"}),e.jsxs("div",{className:"v",children:["Range queries like",e.jsx("span",{className:"small",children:'"WHERE createdAt BETWEEN A AND B"'})]})]})]}),e.jsx("p",{className:"note",children:"Many databases make primary key clustered by default, but not always."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(n,{})}),e.jsx("h3",{className:"h3",children:"Non-clustered index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"non-clustered index"})," is a separate structure that stores index keys and pointers to the actual table rows. Table rows are not stored in index order."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"How many"}),e.jsx("div",{className:"v",children:"Multiple can exist on the same table."})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Best for"}),e.jsx("div",{className:"v",children:"Fast lookups on frequently filtered columns."})]})]}),e.jsx("p",{className:"note",children:"It is like having multiple indexes in a book for different topics."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"B-Tree"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"B-Tree"})," is the most common index structure in relational databases. It stays balanced so searching is fast. It supports both equality and range queries efficiently."]}),e.jsxs("div",{className:"tree",children:[e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Good for"}),e.jsx("span",{className:"tVal",children:'"=", "<", ">", BETWEEN, ORDER BY'})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Why"}),e.jsx("span",{className:"tVal",children:"Balanced tree means fewer disk reads while searching"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Common use"}),e.jsx("span",{className:"tVal",children:"Primary keys, createdAt sorting, range filters"})]})]}),e.jsx("p",{className:"note",children:"In interviews, just remember this: B-Tree is default because it handles many query types well."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"Hash index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"hash index"})," uses a hash function to map a key to a bucket. It is very fast for equality lookups."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Great for"}),e.jsx("div",{className:"v",children:'Equality - "WHERE id = 10"'})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Bad for"}),e.jsxs("div",{className:"v",children:["Range queries and sorting",e.jsx("span",{className:"small",children:"Example: BETWEEN, ORDER BY"})]})]})]}),e.jsx("p",{className:"note",children:"Hash indexes are not always available in all engines for all table types."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Trade-offs"})]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:[e.jsx("b",{children:"Faster reads"})," but ",e.jsx("b",{children:"slower writes"})," ","because index must be updated on INSERT, UPDATE, DELETE"]}),e.jsxs("li",{children:["Uses extra ",e.jsx("b",{children:"storage"})]}),e.jsx("li",{children:"Too many indexes can slow down write-heavy systems"}),e.jsx("li",{children:"Wrong indexes do nothing but still cost space and update time"}),e.jsx("li",{children:"Index maintenance can increase complexity"})]}),e.jsx("p",{className:"note",children:"Rule: index what you search and join on often. Avoid indexing everything blindly."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"B-Tree is general purpose. Hash is equality only. Index speeds reads but adds write and storage cost."})]})]})]})})]})};export{b as default};
+    `},v=()=>{const[r,n]=i.useState(!0),s=i.useMemo(()=>({id:"nosqlBasics",title:"NoSQL Basics",sub:"What NoSQL is, main types, SQL vs NoSQL, and when to choose NoSQL for real systems."}),[]);return e.jsxs(g.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${r?"open":""}`,onClick:()=>n(l=>!l),"aria-expanded":r,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(a,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"NoSQL"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(t,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${r?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"What is NoSQL"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"NoSQL"})," means ",e.jsx("b",{children:"Not Only SQL"}),". It is a category of databases designed for flexibility, high scale, and fast performance for certain workloads. NoSQL systems often store data in formats other than rows and tables."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Flexible schema - fields can vary between records"}),e.jsx("li",{children:"Scales horizontally - add more machines to handle load"}),e.jsx("li",{children:"Optimized for specific access patterns"})]}),e.jsx("p",{className:"note",children:'NoSQL is not "no structure". It is structure that fits the use case.'})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Types"})]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Key-value"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Document"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Column family"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Graph"})]}),e.jsx("p",{className:"p",children:"Each type is built around a different way of storing and querying data. Pick based on how your app reads and writes data."}),e.jsx("p",{className:"note",children:"Most real systems use a mix of SQL and NoSQL."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Key-value"})]}),e.jsxs("p",{className:"p",children:["Stores data as ",e.jsx("b",{children:"key - value"})," pairs. You give a key, it returns a value. Very fast for simple lookups."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example shape"}),e.jsx("pre",{className:"pre",children:`"user:42" -> "{ name: 'Ash', plan: 'pro' }"`})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Best for caching, sessions, counters, feature flags"}),e.jsx("li",{children:"Weak for complex joins or ad-hoc analytics"})]})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Document"})]}),e.jsxs("p",{className:"p",children:["Stores records as ",e.jsx("b",{children:"documents"}),", commonly JSON-like. Each document can have nested objects and arrays."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example document"}),e.jsx("pre",{className:"pre",children:`{
+  "_id": "order_1001",
+  "userId": "u42",
+  "items": [
+    { "sku": "p10", "qty": 2 },
+    { "sku": "p21", "qty": 1 }
+  ],
+  "total": 1299
+}`})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Great for user profiles, product catalogs, logs, content apps"}),e.jsx("li",{children:"Joins are limited, denormalization is common"})]})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"Column family"})]}),e.jsxs("p",{className:"p",children:["Stores data in ",e.jsx("b",{children:"column families"})," ","(wide-column). It is optimized for large-scale reads and writes across many nodes. Rows can have many columns and columns can vary."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Good for time-series, telemetry, large event data"}),e.jsx("li",{children:"Designed for high throughput and scale"}),e.jsx("li",{children:"Query patterns must be planned in advance"})]}),e.jsx("p",{className:"note",children:"Think of it like a giant sparse table tuned for scale."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(m,{})}),e.jsx("h3",{className:"h3",children:"Graph"})]}),e.jsxs("p",{className:"p",children:["Stores data as ",e.jsx("b",{children:"nodes"})," and ",e.jsx("b",{children:"edges"}),". The focus is on relationships and traversals."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example idea"}),e.jsx("pre",{className:"pre",children:`(Ash) -[FRIEND]-> (Neha)
+(Ash) -[LIKES]-> (Robotics)
+(Robotics) -[RELATED]-> (AI)`})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Best for social networks, recommendations, fraud detection"}),e.jsx("li",{children:"Strong for relationship-heavy queries"})]})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"SQL vs NoSQL comparison"})]}),e.jsxs("div",{className:"compare",children:[e.jsxs("div",{className:"row head",children:[e.jsx("div",{children:"SQL (Relational)"}),e.jsx("div",{children:"NoSQL"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Fixed schema, tables and rows"}),e.jsx("div",{children:"Flexible schema, multiple data models"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Strong joins and complex queries"}),e.jsx("div",{children:"Optimized for specific access patterns"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"ACID transactions are common"}),e.jsx("div",{children:"Consistency model can vary, often eventual consistency"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Vertical scaling is common (bigger machine)"}),e.jsx("div",{children:"Horizontal scaling is common (more machines)"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Great for financial, inventory, strong integrity apps"}),e.jsx("div",{children:"Great for logs, content, high traffic, flexible data apps"})]})]}),e.jsx("p",{className:"note",children:"Rule of thumb: if relationships and correctness are core, SQL wins. If scale and flexible structure are core, NoSQL helps."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"When to use NoSQL"})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"When schema changes frequently and you want flexibility"}),e.jsx("li",{children:"When you need massive scale and horizontal scaling is the plan"}),e.jsx("li",{children:"When data is unstructured or semi-structured (logs, events, content)"}),e.jsx("li",{children:"When you need very fast key-based reads (cache, sessions)"}),e.jsx("li",{children:"When relationships are best represented as graphs (recommendations)"}),e.jsx("li",{children:"When your queries are predictable and designed around the storage model"})]}),e.jsx("p",{className:"note",children:"In many products: SQL for core data, NoSQL for logs, cache, search, and high-scale side workloads."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"NoSQL is about choosing the right data model - key-value for speed, document for flexible JSON, column family for scale, graph for relationships."})]})]})]})})]})};export{v as default};

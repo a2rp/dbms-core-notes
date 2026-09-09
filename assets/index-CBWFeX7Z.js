@@ -1,4 +1,4 @@
-import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}from"./index-B13LwCCT.js";const m={Wrapper:t.section`
+import{c as n,r as i,j as s,t as r,d as c,u as t,v as d,w as p,x,b as m}from"./index-D5IfMMY7.js";const h={Wrapper:n.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -253,12 +253,6 @@ import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}fro
             flex: 0 0 auto;
         }
 
-        .cIcon.warn {
-            color: var(--color-warning);
-            box-shadow: 0 0 0 4px
-                color-mix(in srgb, var(--color-warning) 10%, transparent);
-        }
-
         .cIcon svg {
             width: 18px;
             height: 18px;
@@ -312,17 +306,6 @@ import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}fro
             user-select: none;
         }
 
-        .list {
-            display: grid;
-            gap: 10px;
-        }
-
-        .list li {
-            color: var(--color-text-secondary);
-            font-size: 13.5px;
-            line-height: 1.55;
-        }
-
         .kvs {
             display: grid;
             gap: 10px;
@@ -331,7 +314,7 @@ import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}fro
 
         .kv {
             display: grid;
-            grid-template-columns: 140px 1fr;
+            grid-template-columns: 110px 1fr;
             gap: 10px;
             padding: 10px;
             border-radius: 14px;
@@ -363,60 +346,15 @@ import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}fro
             line-height: 1.5;
         }
 
-        .badGood {
+        .list {
             display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 10px;
-            margin: 10px 0 10px;
         }
 
-        .bgCard {
-            border-radius: 14px;
-            border: 1px solid var(--color-border);
-            background: color-mix(
-                in srgb,
-                var(--color-surface-2) 78%,
-                transparent
-            );
-            padding: 10px;
-        }
-
-        .bgCard.bad {
-            box-shadow: 0 0 0 4px
-                color-mix(in srgb, var(--color-error) 10%, transparent);
-        }
-
-        .bgCard.good {
-            box-shadow: 0 0 0 4px
-                color-mix(in srgb, var(--color-success) 10%, transparent);
-        }
-
-        .bgTitle {
-            font-weight: 900;
-            color: var(--color-text-primary);
-            font-size: 12.5px;
-            margin-bottom: 6px;
-        }
-
-        .bgText {
+        .list li {
             color: var(--color-text-secondary);
-            font-size: 12.8px;
-            line-height: 1.5;
-            margin-bottom: 8px;
-        }
-
-        .bgMono {
-            border-radius: 12px;
-            border: 1px solid var(--color-code-border);
-            background: var(--color-code-bg);
-            padding: 10px;
-            color: var(--color-text-primary);
-            font-size: 12.5px;
-            line-height: 1.45;
-            font-family:
-                ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-                "Liberation Mono", "Courier New", monospace;
-            overflow-x: auto;
+            font-size: 13.5px;
+            line-height: 1.55;
         }
 
         .bottomNote {
@@ -474,12 +412,8 @@ import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}fro
                 grid-column: span 12;
             }
 
-            .badGood {
-                grid-template-columns: 1fr;
-            }
-
             .kv {
                 grid-template-columns: 1fr;
             }
         }
-    `},b=()=>{const[a,o]=i.useState(!0),r=i.useMemo(()=>({id:"securityInDbms",title:"Security in DBMS",sub:"Authentication, authorization, roles, encryption at rest and in transit, and SQL injection basics."}),[]);return e.jsxs(m.Wrapper,{id:r.id,children:[e.jsxs("button",{type:"button",className:`head ${a?"open":""}`,onClick:()=>o(n=>!n),"aria-expanded":a,"aria-controls":`${r.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(s,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:r.title}),e.jsx("span",{className:"badge",children:"Must know"})]}),e.jsx("p",{className:"sub",children:r.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(l,{})})]}),e.jsx("div",{id:`${r.id}-content`,className:`content ${a?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(c,{})}),e.jsx("h3",{className:"h3",children:"Authentication"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Authentication"}),' means verifying identity. DBMS checks "who you are" before allowing access.']}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Common methods - password, certificate, token, SSO (Single Sign-On)"}),e.jsx("li",{children:"Good practice - strong passwords, rotate credentials, use MFA (Multi-Factor Authentication)"})]}),e.jsx("p",{className:"note",children:"Memory: authentication is identity proof."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"Authorization"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Authorization"}),' means permissions. DBMS decides "what you can do" after you are authenticated.']}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"READ"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"WRITE"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"ADMIN"})]}),e.jsx("p",{className:"note",children:"Memory: authorization is allowed actions."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Roles"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"role"})," is a named set of permissions. Instead of giving permissions to each user one by one, assign a role to a user."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Why roles"}),e.jsx("div",{className:"v",children:"Easier management, less mistakes, consistent access control."})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Examples"}),e.jsxs("div",{className:"v",children:["reader role - only SELECT",e.jsx("span",{className:"small",children:"writer role - SELECT + INSERT + UPDATE"}),e.jsx("span",{className:"small",children:"admin role - schema changes + user management"})]})]})]}),e.jsx("p",{className:"note",children:"Follow least privilege: give only the permissions needed for the job."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Encryption at rest"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Encryption at rest"})," means encrypting data stored on disk. If someone steals the database files or disk snapshot, they cannot read it without the key."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Applies to - data files, backups, snapshots"}),e.jsx("li",{children:"Common approach - TDE (Transparent Data Encryption)"}),e.jsx("li",{children:"Key management matters - keep keys separate from data"})]}),e.jsx("p",{className:"note",children:"At rest protects storage. It does not protect data while travelling on the network."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(s,{})}),e.jsx("h3",{className:"h3",children:"Encryption in transit"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Encryption in transit"})," means encrypting data while it moves between client and DB server, or between DB nodes. This prevents sniffing and man-in-the-middle attacks."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"TLS"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"SSL"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Certificates"})]}),e.jsx("p",{className:"note",children:"Use TLS. SSL term is still used, but modern setups are TLS based."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon warn",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"SQL injection basics"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"SQL injection"})," is an attack where an attacker tricks your app into running unintended SQL by injecting input into a query string. This can leak data, bypass login, or even delete tables."]}),e.jsxs("div",{className:"badGood",children:[e.jsxs("div",{className:"bgCard bad",children:[e.jsx("div",{className:"bgTitle",children:"Bad pattern"}),e.jsx("div",{className:"bgText",children:"Building SQL by string concatenation with user input."}),e.jsx("div",{className:"bgMono",children:'SELECT * FROM users WHERE email = " + userEmail'})]}),e.jsxs("div",{className:"bgCard good",children:[e.jsx("div",{className:"bgTitle",children:"Good pattern"}),e.jsx("div",{className:"bgText",children:"Use parameterized queries or prepared statements."}),e.jsx("div",{className:"bgMono",children:"SELECT * FROM users WHERE email = ?"})]})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Always use prepared statements and parameterized queries"}),e.jsx("li",{children:"Validate input types and lengths"}),e.jsx("li",{children:"Use least privilege DB users for apps"}),e.jsx("li",{children:"Avoid showing raw SQL errors to users"})]}),e.jsx("p",{className:"note",children:"Most SQL injection happens at application layer, not inside the DBMS itself."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(s,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Authentication - who you are. Authorization - what you can do. Encrypt disk and network. Prevent SQL injection with parameters."})]})]})]})})]})};export{b as default};
+    `},g=()=>{const[a,l]=i.useState(!0),e=i.useMemo(()=>({id:"sqlBasics",title:"SQL Basics",sub:"SQL meaning and the 5 command groups - DDL, DML, DQL, TCL, DCL, with common commands and examples."}),[]);return s.jsxs(h.Wrapper,{id:e.id,children:[s.jsxs("button",{type:"button",className:`head ${a?"open":""}`,onClick:()=>l(o=>!o),"aria-expanded":a,"aria-controls":`${e.id}-content`,children:[s.jsxs("div",{className:"left",children:[s.jsx("span",{className:"icon",children:s.jsx(r,{})}),s.jsxs("div",{className:"text",children:[s.jsxs("div",{className:"titleRow",children:[s.jsx("h2",{className:"title",children:e.title}),s.jsx("span",{className:"badge",children:"SQL"})]}),s.jsx("p",{className:"sub",children:e.sub})]})]}),s.jsx("span",{className:"chev",children:s.jsx(c,{})})]}),s.jsx("div",{id:`${e.id}-content`,className:`content ${a?"show":""}`,children:s.jsxs("div",{className:"inner",children:[s.jsxs("div",{className:"grid",children:[s.jsxs("div",{className:"card span12",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(r,{})}),s.jsx("h3",{className:"h3",children:"What is SQL - Structured Query Language"})]}),s.jsxs("p",{className:"p",children:[s.jsx("b",{children:"SQL"})," means"," ",s.jsx("b",{children:"Structured Query Language"}),". It is the standard language used to talk to relational databases. With SQL, you can define tables, insert and update rows, query data, and control access."]}),s.jsxs("div",{className:"mini",children:[s.jsx("span",{className:"pill",children:"Define"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Insert"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Query"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Control"}),s.jsx("span",{className:"dash",children:"-"}),s.jsx("span",{className:"pill",children:"Commit"})]}),s.jsx("p",{className:"note",children:"SQL is declarative. You tell what you want, the database figures out how to do it."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(t,{})}),s.jsx("h3",{className:"h3",children:"DDL - Data Definition Language"})]}),s.jsx("p",{className:"p",children:"DDL is used to create and modify database structure like tables and columns."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"CREATE"}),s.jsxs("div",{className:"v",children:["Creates objects like tables, indexes, views.",s.jsx("span",{className:"small",children:"Example: create table users (...)"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"ALTER"}),s.jsxs("div",{className:"v",children:["Modifies structure of existing objects.",s.jsx("span",{className:"small",children:"Example: add a column, change datatype"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"DROP"}),s.jsxs("div",{className:"v",children:["Deletes objects permanently.",s.jsx("span",{className:"small",children:"Example: drop table users"})]})]})]}),s.jsx("p",{className:"note",children:"DDL changes schema. Many DBs auto-commit DDL."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(d,{})}),s.jsx("h3",{className:"h3",children:"DML - Data Manipulation Language"})]}),s.jsx("p",{className:"p",children:"DML is used to change actual data inside tables. It works on rows."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"INSERT"}),s.jsxs("div",{className:"v",children:["Adds new rows to a table.",s.jsx("span",{className:"small",children:"Example: insert into users values (...)"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"UPDATE"}),s.jsxs("div",{className:"v",children:["Modifies existing rows.",s.jsx("span",{className:"small",children:"Example: update users set name='A' where id=1"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"DELETE"}),s.jsxs("div",{className:"v",children:["Removes rows from a table.",s.jsx("span",{className:"small",children:"Example: delete from users where id=1"})]})]})]}),s.jsx("p",{className:"note",children:"DML is usually controlled by transactions. You can rollback if not committed."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(p,{})}),s.jsx("h3",{className:"h3",children:"DQL - Data Query Language"})]}),s.jsx("p",{className:"p",children:"DQL is used to read data from tables. The core command is SELECT."}),s.jsx("div",{className:"kvs",children:s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"SELECT"}),s.jsxs("div",{className:"v",children:["Fetches rows and columns from one or more tables.",s.jsx("span",{className:"small",children:"Example: select name from users where city='Bhopal'"})]})]})}),s.jsx("p",{className:"note",children:"Best habit: always start with a WHERE clause in mind to avoid full table scans."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(x,{})}),s.jsx("h3",{className:"h3",children:"TCL - Transaction Control Language"})]}),s.jsx("p",{className:"p",children:"TCL manages transactions. It decides when your changes become permanent or when to undo them."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"COMMIT"}),s.jsx("div",{className:"v",children:"Makes changes permanent in the database."})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"ROLLBACK"}),s.jsx("div",{className:"v",children:"Undoes changes since last commit or savepoint."})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"SAVEPOINT"}),s.jsx("div",{className:"v",children:"Creates a named point inside a transaction to rollback partially."})]})]}),s.jsx("p",{className:"note",children:"Think of SAVEPOINT like a checkpoint inside one transaction."})]}),s.jsxs("div",{className:"card",children:[s.jsxs("div",{className:"cardTop",children:[s.jsx("span",{className:"cIcon",children:s.jsx(m,{})}),s.jsx("h3",{className:"h3",children:"DCL - Data Control Language"})]}),s.jsx("p",{className:"p",children:"DCL controls permissions. It decides who can read, write, or manage database objects."}),s.jsxs("div",{className:"kvs",children:[s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"GRANT"}),s.jsxs("div",{className:"v",children:["Gives permissions to a user or role.",s.jsx("span",{className:"small",children:"Example: grant select on users to analystRole"})]})]}),s.jsxs("div",{className:"kv",children:[s.jsx("div",{className:"k",children:"REVOKE"}),s.jsxs("div",{className:"v",children:["Removes previously granted permissions.",s.jsx("span",{className:"small",children:"Example: revoke insert on users from tempUser"})]})]})]}),s.jsx("p",{className:"note",children:"DCL is critical in production to prevent accidental data damage."})]})]}),s.jsxs("div",{className:"bottomNote",children:[s.jsx("div",{className:"bnIcon",children:s.jsx(r,{})}),s.jsxs("div",{className:"bnText",children:[s.jsx("div",{className:"bnTitle",children:"Quick memory"}),s.jsx("div",{className:"bnSub",children:"DDL defines structure, DML changes rows, DQL reads, TCL controls commit and rollback, DCL controls permissions."})]})]})]})})]})};export{g as default};
