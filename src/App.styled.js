@@ -9,7 +9,9 @@ export const Styled = {
    .studyNav nav { display: grid; gap: 4px; }
    .studyNav a { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px; border-radius: 10px; color: var(--color-text-secondary); text-align: left; font-size: 13px; font-weight: 800; text-decoration: none; line-height: 1.25; transition: background .16s ease, color .16s ease, transform .16s ease; }
    .studyNav a:hover, .studyNav a.active { background: var(--color-primary); color: #fff; }
-   .studyNav a svg { flex: 0 0 auto; font-size: 16px; }`r`n   .studyNav a:hover { transform: translateX(2px); }`r`n   .studyNav p { margin: 18px 10px 0; color: var(--color-text-muted); font-size: 12px; }
+   .studyNav a svg { flex: 0 0 auto; font-size: 16px; }
+   .studyNav a:hover { transform: translateX(2px); }
+   .studyNav p { margin: 18px 10px 0; color: var(--color-text-muted); font-size: 12px; }
    .contentWrapper { min-height: 100%; max-width: 1440px; margin: 0 0 0 248px; display: flex; flex-direction: column; padding: 15px; }
    .topicWrapper { display: none; }
    .topicWrapper.activeTopic { display: block; }
@@ -17,4 +19,5 @@ export const Styled = {
    @media (max-width: 800px) { .studyNav { position: static; width: auto; margin: 12px; border: 1px solid var(--color-border); border-radius: 16px; max-height: 220px; } .studyNav nav { grid-template-columns: repeat(2, minmax(0, 1fr)); } .contentWrapper { margin-left: 0; } }
  `,
 };
+
 
