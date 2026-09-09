@@ -1,4 +1,4 @@
-// src/topics/sqlQueryingEssentials/index.jsx
+﻿// src/topics/sqlQueryingEssentials/index.jsx
 import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 import {
@@ -13,7 +13,7 @@ import {
 
 const SqlQueryingEssentials = () => {
     // default collapsed
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const meta = useMemo(() => {
         return {
@@ -407,3 +407,4 @@ HAVING COUNT(*) >= 10;`}</pre>
 };
 
 export default SqlQueryingEssentials;
+

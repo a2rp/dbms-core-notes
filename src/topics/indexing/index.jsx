@@ -1,4 +1,4 @@
-// src/topics/indexing/index.jsx
+﻿// src/topics/indexing/index.jsx
 import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 import {
@@ -12,7 +12,7 @@ import {
 
 const Indexing = () => {
     // default collapsed
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const meta = useMemo(() => {
         return {
@@ -350,3 +350,4 @@ const Indexing = () => {
 };
 
 export default Indexing;
+

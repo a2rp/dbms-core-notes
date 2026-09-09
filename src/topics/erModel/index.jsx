@@ -1,4 +1,4 @@
-// src/topics/erModel/index.jsx
+﻿// src/topics/erModel/index.jsx
 import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 import {
@@ -14,7 +14,7 @@ import {
 
 const ErModel = () => {
     // default collapsed
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const meta = useMemo(() => {
         return {
@@ -489,3 +489,4 @@ const ErModel = () => {
 };
 
 export default ErModel;
+

@@ -1,4 +1,4 @@
-// src/topics/distributedDatabases/index.jsx
+﻿// src/topics/distributedDatabases/index.jsx
 import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 import {
@@ -13,7 +13,7 @@ import {
 
 const DistributedDatabases = () => {
     // default collapsed
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const meta = useMemo(() => {
         return {
@@ -388,3 +388,4 @@ const DistributedDatabases = () => {
 };
 
 export default DistributedDatabases;
+

@@ -1,4 +1,4 @@
-// src/topics/relationalModel/index.jsx
+﻿// src/topics/relationalModel/index.jsx
 import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 import {
@@ -13,7 +13,7 @@ import {
 
 const RelationalModel = () => {
     // default collapsed
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const meta = useMemo(() => {
         return {
@@ -376,3 +376,4 @@ const RelationalModel = () => {
 };
 
 export default RelationalModel;
+

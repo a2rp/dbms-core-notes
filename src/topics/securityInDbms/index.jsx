@@ -1,4 +1,4 @@
-// src/topics/securityInDbms/index.jsx
+﻿// src/topics/securityInDbms/index.jsx
 import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 import {
@@ -13,7 +13,7 @@ import {
 
 const SecurityInDbms = () => {
     // default collapsed
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const meta = useMemo(() => {
         return {
@@ -307,3 +307,4 @@ const SecurityInDbms = () => {
 };
 
 export default SecurityInDbms;
+

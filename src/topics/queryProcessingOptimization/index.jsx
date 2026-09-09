@@ -1,4 +1,4 @@
-// src/topics/queryProcessingOptimization/index.jsx
+﻿// src/topics/queryProcessingOptimization/index.jsx
 import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 import {
@@ -12,7 +12,7 @@ import {
 
 const QueryProcessingOptimization = () => {
     // default collapsed
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const meta = useMemo(() => {
         return {
@@ -354,3 +354,4 @@ const QueryProcessingOptimization = () => {
 };
 
 export default QueryProcessingOptimization;
+

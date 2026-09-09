@@ -1,4 +1,4 @@
-// src/topics/joinsAndSubqueries/index.jsx
+﻿// src/topics/joinsAndSubqueries/index.jsx
 import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 import {
@@ -12,7 +12,7 @@ import {
 
 const JoinsAndSubqueries = () => {
     // default collapsed
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const meta = useMemo(() => {
         return {
@@ -425,3 +425,4 @@ WHERE deptId IN (
 };
 
 export default JoinsAndSubqueries;
+

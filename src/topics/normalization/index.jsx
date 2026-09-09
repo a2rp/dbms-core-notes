@@ -1,4 +1,4 @@
-// src/topics/normalization/index.jsx
+﻿// src/topics/normalization/index.jsx
 import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 import {
@@ -12,7 +12,7 @@ import {
 
 const Normalization = () => {
     // default collapsed
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const meta = useMemo(() => {
         return {
@@ -410,3 +410,4 @@ const Normalization = () => {
 };
 
 export default Normalization;
+

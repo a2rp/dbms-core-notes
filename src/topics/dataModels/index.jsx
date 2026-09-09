@@ -1,4 +1,4 @@
-// src/topics/dataModels/index.jsx
+﻿// src/topics/dataModels/index.jsx
 import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 import {
@@ -12,7 +12,7 @@ import {
 
 const DataModels = () => {
     // default collapsed
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const meta = useMemo(() => {
         return {
@@ -312,3 +312,4 @@ const DataModels = () => {
 };
 
 export default DataModels;
+

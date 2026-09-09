@@ -1,4 +1,4 @@
-// src/topics/transactionsAndConcurrency/index.jsx
+﻿// src/topics/transactionsAndConcurrency/index.jsx
 import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 import {
@@ -13,7 +13,7 @@ import {
 
 const TransactionsAndConcurrency = () => {
     // default collapsed
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const meta = useMemo(() => {
         return {
@@ -555,3 +555,4 @@ const TransactionsAndConcurrency = () => {
 };
 
 export default TransactionsAndConcurrency;
+
