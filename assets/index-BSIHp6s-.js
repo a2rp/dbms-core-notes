@@ -1,4 +1,4 @@
-import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}from"./index-Mc0Xt7Eb.js";const m={Wrapper:n.section`
+import{c as t,r as i,j as e,K as a,d as c,a as p,L as x,g as o,M as l,b as h}from"./index-CyXpBq5a.js";const m={Wrapper:t.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -278,34 +278,6 @@ import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}fro
             margin-top: 6px;
         }
 
-        .mini {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            align-items: center;
-            margin: 10px 0 6px;
-        }
-
-        .pill {
-            padding: 6px 10px;
-            border-radius: 999px;
-            border: 1px solid var(--color-border);
-            background: color-mix(
-                in srgb,
-                var(--color-surface-2) 82%,
-                transparent
-            );
-            color: var(--color-text-primary);
-            font-size: 12.5px;
-            font-weight: 800;
-        }
-
-        .dash {
-            color: var(--color-text-muted);
-            font-size: 12px;
-            user-select: none;
-        }
-
         .list {
             display: grid;
             gap: 10px;
@@ -315,6 +287,20 @@ import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}fro
             color: var(--color-text-secondary);
             font-size: 13.5px;
             line-height: 1.55;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .list li::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--color-primary);
+            position: absolute;
+            left: 0;
+            top: 8px;
+            opacity: 0.9;
         }
 
         .kvs {
@@ -325,7 +311,7 @@ import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}fro
 
         .kv {
             display: grid;
-            grid-template-columns: 170px 1fr;
+            grid-template-columns: 140px 1fr;
             gap: 10px;
             padding: 10px;
             border-radius: 14px;
@@ -401,17 +387,16 @@ import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}fro
             line-height: 1.5;
         }
 
-        .scenario {
-            display: grid;
-            gap: 10px;
+        .steps {
             margin-top: 10px;
+            display: grid;
+            gap: 8px;
         }
 
         .step {
             display: grid;
-            grid-template-columns: 34px 1fr;
+            grid-template-columns: 36px 1fr;
             gap: 10px;
-            align-items: center;
             padding: 10px;
             border-radius: 14px;
             border: 1px solid var(--color-border);
@@ -422,10 +407,10 @@ import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}fro
             );
         }
 
-        .num {
-            width: 28px;
-            height: 28px;
-            border-radius: 10px;
+        .n {
+            width: 30px;
+            height: 30px;
+            border-radius: 12px;
             display: grid;
             place-items: center;
             border: 1px solid var(--color-border);
@@ -436,18 +421,12 @@ import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}fro
             );
             color: var(--color-primary);
             font-weight: 900;
-            font-size: 12px;
         }
 
-        .txt {
+        .t {
             color: var(--color-text-secondary);
             font-size: 13px;
             line-height: 1.55;
-        }
-
-        .txt b {
-            color: var(--color-text-primary);
-            font-weight: 900;
         }
 
         .bottomNote {
@@ -517,4 +496,4 @@ import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}fro
                 grid-template-columns: 1fr;
             }
         }
-    `},v=()=>{const[s,l]=a.useState(!0),r=a.useMemo(()=>({id:"backupAndRecovery",title:"Backup and Recovery",sub:"Full, incremental, differential backups, crash recovery, logs, and checkpoints."}),[]);return e.jsxs(m.Wrapper,{id:r.id,children:[e.jsxs("button",{type:"button",className:`head ${s?"open":""}`,onClick:()=>l(c=>!c),"aria-expanded":s,"aria-controls":`${r.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(i,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:r.title}),e.jsx("span",{className:"badge",children:"Safety"})]}),e.jsx("p",{className:"sub",children:r.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(t,{})})]}),e.jsx("div",{id:`${r.id}-content`,className:`content ${s?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"Why backup and recovery matter"})]}),e.jsxs("p",{className:"p",children:["Backups protect you from ",e.jsx("b",{children:"human mistakes"})," ","(accidental delete),",e.jsx("b",{children:"hardware failures"}),", ",e.jsx("b",{children:"software bugs"}),", and ",e.jsx("b",{children:"crashes"}),". Recovery is the process of bringing the database back to a correct state."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Backup"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Restore"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Replay logs"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Consistent state"})]}),e.jsx("p",{className:"note",children:"Backups give you a base copy. Logs help you recover the latest committed changes."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Backup types"})]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Full backup"}),e.jsxs("div",{className:"v",children:["Takes a complete copy of the database at a point in time.",e.jsx("span",{className:"small",children:"Pros: simplest restore - Cons: slower and larger size"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Incremental backup"}),e.jsxs("div",{className:"v",children:["Backs up only the data changed since the"," ",e.jsx("b",{children:"last backup"})," (full or incremental).",e.jsx("span",{className:"small",children:"Pros: fast and small - Cons: restore needs full + all incrementals"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Differential backup"}),e.jsxs("div",{className:"v",children:["Backs up only the data changed since the"," ",e.jsx("b",{children:"last full backup"}),".",e.jsx("span",{className:"small",children:"Pros: restore needs full + latest differential - Cons: grows bigger over time"})]})]})]}),e.jsxs("div",{className:"compare",children:[e.jsxs("div",{className:"row head",children:[e.jsx("div",{children:"Type"}),e.jsx("div",{children:"Restore requirement"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Full"}),e.jsx("div",{children:"Restore the full backup"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Incremental"}),e.jsx("div",{children:"Full + every incremental in order"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Differential"}),e.jsx("div",{children:"Full + latest differential"})]})]}),e.jsx("p",{className:"note",children:"Simple interview line: Incremental is smaller but restore is longer. Differential is larger but restore is simpler."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Crash recovery"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Crash recovery"})," means restoring the database to a correct state after a crash like power loss or server restart."]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:["Ensure ",e.jsx("b",{children:"committed"})," transactions are not lost"]}),e.jsxs("li",{children:["Undo ",e.jsx("b",{children:"uncommitted"})," transactions to avoid partial updates"]}),e.jsx("li",{children:"Bring database back to a consistent state"})]}),e.jsx("p",{className:"note",children:"Recovery is mainly about redo committed work and undo incomplete work."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Log-based recovery"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Log-based recovery"})," uses a log file that records changes made by transactions. The log is used to ",e.jsx("b",{children:"redo"})," or ",e.jsx("b",{children:"undo"})," operations during recovery."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Redo"}),e.jsx("div",{className:"v",children:"Re-apply changes of committed transactions if they were not written to disk."})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Undo"}),e.jsx("div",{className:"v",children:"Roll back changes of uncommitted transactions to remove partial updates."})]})]}),e.jsx("p",{className:"note",children:"Logs are usually written before data pages. That rule is called WAL."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Checkpoints"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"checkpoint"}),' is a marker that says "up to this point, the database has flushed enough info to make recovery faster". It reduces how far back the DBMS must scan the log after a crash.']}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Log grows"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Checkpoint"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Less redo work"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Faster restart"})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Checkpoints write a safe recovery point into the log"}),e.jsx("li",{children:"DBMS flushes some dirty pages to disk"}),e.jsx("li",{children:"Recovery scans logs mainly after the last checkpoint"})]}),e.jsx("p",{className:"note",children:"Without checkpoints, recovery may need to scan a huge log, slowing restart."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"Quick scenario you can say in interviews"})]}),e.jsxs("div",{className:"scenario",children:[e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"1"}),e.jsxs("div",{className:"txt",children:["Restore latest ",e.jsx("b",{children:"full backup"})]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"2"}),e.jsxs("div",{className:"txt",children:["Apply ",e.jsx("b",{children:"latest differential"})," or all"," ",e.jsx("b",{children:"incrementals"})]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"3"}),e.jsxs("div",{className:"txt",children:["Use ",e.jsx("b",{children:"logs"})," to redo committed and undo uncommitted work"]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"4"}),e.jsx("div",{className:"txt",children:"Checkpoint helps by cutting log scan time"})]})]})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(i,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Full is base copy. Incremental is since last backup. Differential is since last full. Logs do redo and undo. Checkpoints speed recovery."})]})]})]})})]})};export{v as default};
+    `},b=()=>{const[r,n]=i.useState(!0),s=i.useMemo(()=>({id:"storageAndArchitecture",title:"Storage and Architecture",sub:"Disk basics, pages and blocks, buffer pool, record storage, files, logs, and WAL."}),[]);return e.jsxs(m.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${r?"open":""}`,onClick:()=>n(d=>!d),"aria-expanded":r,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(a,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"Engine basics"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(c,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${r?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"Disk storage basics"})]}),e.jsxs("p",{className:"p",children:["Databases store data on"," ",e.jsx("b",{children:"persistent storage"}),"like SSD or HDD so it survives restarts. Disk is much slower than RAM, so databases try to do fewer disk reads and writes."]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:[e.jsx("b",{children:"RAM"})," - very fast, but data is lost on power off"]}),e.jsxs("li",{children:[e.jsx("b",{children:"Disk"})," - slower, but data stays safe after restart"]}),e.jsx("li",{children:"DB engines batch writes and use caching to reduce disk access"})]}),e.jsx("p",{className:"note",children:"Simple mental model: disk is safe but slow, memory is fast but temporary."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Pages and blocks"})]}),e.jsxs("p",{className:"p",children:["Databases do not read single rows directly from disk. They read fixed-size chunks called"," ",e.jsx("b",{children:"pages"}),". On disk, these chunks are often called ",e.jsx("b",{children:"blocks"}),"."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Page"}),e.jsxs("div",{className:"v",children:["Fixed-size unit of storage used by the DB engine.",e.jsx("span",{className:"small",children:"Example sizes: 4KB, 8KB, 16KB depending on DB"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Block"}),e.jsx("div",{className:"v",children:"Disk level term for a chunk of data. Often maps closely to a page."})]})]}),e.jsx("p",{className:"note",children:"If one row is needed, the whole page containing that row is loaded into memory."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Buffer pool"})]}),e.jsxs("p",{className:"p",children:["The ",e.jsx("b",{children:"buffer pool"})," is a memory area where the DB keeps recently used pages. It is basically the database cache."]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:["If a needed page is in buffer pool, it is a"," ",e.jsx("b",{children:"cache hit"})]}),e.jsxs("li",{children:["If not, it is a ",e.jsx("b",{children:"cache miss"})," and DB reads from disk"]}),e.jsx("li",{children:"When buffer pool is full, DB evicts old pages using a policy like LRU style"})]}),e.jsx("p",{className:"note",children:"Bigger buffer pool usually means fewer disk reads and faster queries."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Record storage"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"record"})," is a stored row of a table. Inside a page, records are stored with metadata so the DB can find them quickly."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Rows may have fixed-length and variable-length fields"}),e.jsx("li",{children:"Pages often maintain a slot directory to locate records"}),e.jsx("li",{children:"Updates can create fragmentation, DB may reorganize pages"})]}),e.jsx("p",{className:"note",children:"You do not need page internals for interviews, just know records live inside pages."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"Heap file"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"heap file"})," stores records in no specific order. New records are placed wherever space is available."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Fast inserts"}),e.jsx("li",{children:"Search can be slow without an index"}),e.jsx("li",{children:"Common base storage method for tables"})]}),e.jsx("p",{className:"note",children:"Heap does not mean heap memory. It just means unordered file storage."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"Sequential file"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"sequential file"})," stores records in a sorted order based on a key like an id or timestamp."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Good for range queries and ordered scanning"}),e.jsx("li",{children:"Insert and delete can be slower because order must be maintained"}),e.jsx("li",{children:"Often used for logs or data files designed for sequential reads"})]}),e.jsx("p",{className:"note",children:"Think: sequential is scan-friendly, heap is insert-friendly."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Log file"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"log file"})," records changes made by transactions. It is used for crash recovery to restore a consistent state. Logs are usually written sequentially, which is fast on disk."]}),e.jsxs("div",{className:"compare",children:[e.jsxs("div",{className:"row head",children:[e.jsx("div",{children:"Data file"}),e.jsx("div",{children:"Log file"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Stores actual table data pages and index pages"}),e.jsx("div",{children:"Stores change history and transaction actions"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Random reads and writes based on queries"}),e.jsx("div",{children:"Mostly sequential writes"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Used for normal query reads"}),e.jsx("div",{children:"Used mainly for recovery and durability"})]})]}),e.jsx("p",{className:"note",children:"Logging is a key reason databases can recover after a crash without losing committed transactions."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"Write-ahead logging - WAL"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"WAL"})," means ",e.jsx("b",{children:"Write-Ahead Logging"}),". Rule: write the log record to disk before writing the data page to disk. This ensures durability and correct recovery."]}),e.jsxs("div",{className:"steps",children:[e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"n",children:"1"}),e.jsx("div",{className:"t",children:"Transaction updates a row in memory"})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"n",children:"2"}),e.jsx("div",{className:"t",children:"DB writes the change into the log file on disk"})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"n",children:"3"}),e.jsx("div",{className:"t",children:"Later, DB writes the actual data page to disk"})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"n",children:"4"}),e.jsx("div",{className:"t",children:"On crash, DB replays logs to redo committed changes and undo incomplete ones"})]})]}),e.jsx("p",{className:"note",children:"WAL makes commits reliable even if data pages are flushed later."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Disk stores pages. Buffer pool caches pages. Logs record changes. WAL means log first, data later."})]})]})]})})]})};export{b as default};

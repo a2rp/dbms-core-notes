@@ -1,4 +1,4 @@
-import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./index-Mc0Xt7Eb.js";const h={Wrapper:t.section`
+import{c as n,r as a,j as e,K as i,d as t,E as d,g as o,x as p,C as x,U as h}from"./index-CyXpBq5a.js";const m={Wrapper:n.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -317,11 +317,6 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
             line-height: 1.55;
         }
 
-        .list b {
-            color: var(--color-text-primary);
-            font-weight: 900;
-        }
-
         .kvs {
             display: grid;
             gap: 10px;
@@ -330,7 +325,7 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
 
         .kv {
             display: grid;
-            grid-template-columns: 160px 1fr;
+            grid-template-columns: 170px 1fr;
             gap: 10px;
             padding: 10px;
             border-radius: 14px;
@@ -362,40 +357,97 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
             line-height: 1.5;
         }
 
-        .tree {
-            margin-top: 10px;
+        .compare {
             border-radius: 14px;
             border: 1px solid var(--color-border);
+            overflow: hidden;
             background: color-mix(
                 in srgb,
                 var(--color-surface-2) 76%,
                 transparent
             );
-            overflow: hidden;
+            margin-top: 10px;
         }
 
-        .tRow {
+        .row {
             display: grid;
-            grid-template-columns: 140px 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
             padding: 10px;
             border-top: 1px solid var(--color-border);
         }
 
-        .tRow:first-child {
+        .row:first-child {
             border-top: 0;
         }
 
-        .tLabel {
-            color: var(--color-text-primary);
-            font-weight: 900;
-            font-size: 13px;
+        .row.head {
+            background: color-mix(
+                in srgb,
+                var(--color-surface) 80%,
+                transparent
+            );
         }
 
-        .tVal {
+        .row.head div {
+            color: var(--color-text-primary);
+            font-weight: 900;
+            font-size: 12.5px;
+        }
+
+        .row div {
+            color: var(--color-text-secondary);
+            font-size: 12.8px;
+            line-height: 1.5;
+        }
+
+        .scenario {
+            display: grid;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 34px 1fr;
+            gap: 10px;
+            align-items: center;
+            padding: 10px;
+            border-radius: 14px;
+            border: 1px solid var(--color-border);
+            background: color-mix(
+                in srgb,
+                var(--color-surface-2) 78%,
+                transparent
+            );
+        }
+
+        .num {
+            width: 28px;
+            height: 28px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--color-border);
+            background: color-mix(
+                in srgb,
+                var(--color-surface) 86%,
+                transparent
+            );
+            color: var(--color-primary);
+            font-weight: 900;
+            font-size: 12px;
+        }
+
+        .txt {
             color: var(--color-text-secondary);
             font-size: 13px;
             line-height: 1.55;
+        }
+
+        .txt b {
+            color: var(--color-text-primary);
+            font-weight: 900;
         }
 
         .bottomNote {
@@ -457,8 +509,12 @@ import{c as t,r as i,j as e,w as a,d as c,F as l,J as x,a as n,E as p}from"./ind
                 grid-template-columns: 1fr;
             }
 
-            .tRow {
+            .row {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
                 grid-template-columns: 1fr;
             }
         }
-    `},b=()=>{const[r,o]=i.useState(!0),s=i.useMemo(()=>({id:"indexing",title:"Indexing",sub:"What indexes are, clustered vs non-clustered, B-Tree, hash index, when to use, and trade-offs."}),[]);return e.jsxs(h.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${r?"open":""}`,onClick:()=>o(d=>!d),"aria-expanded":r,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(a,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"Performance"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(c,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${r?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"What is index"})]}),e.jsxs("p",{className:"p",children:["An ",e.jsx("b",{children:"index"})," is an extra data structure that helps the database find rows faster without scanning the entire table."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Table"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Full scan"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Slow"})]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Index"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Jump to rows"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Fast"})]}),e.jsx("p",{className:"note",children:"Index is like a book index. You jump to the page instead of reading every page."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"When to use index"})]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:["Columns used often in ",e.jsx("b",{children:"WHERE"})]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"JOIN"})," conditions"]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"ORDER BY"})]}),e.jsxs("li",{children:["Columns used in ",e.jsx("b",{children:"GROUP BY"})," (sometimes)"]}),e.jsx("li",{children:"Columns with high selectivity (many unique values)"})]}),e.jsx("p",{className:"note",children:"Index helps when it reduces scanned rows a lot. Index is less useful when most rows match."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(n,{})}),e.jsx("h3",{className:"h3",children:"Clustered index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"clustered index"})," decides the physical order of rows on disk based on the indexed column. The table data is stored in the same order as the clustered key."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"How many"}),e.jsxs("div",{className:"v",children:["Usually ",e.jsx("b",{children:"one"})," per table, because rows can be stored physically in one order only."]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Best for"}),e.jsxs("div",{className:"v",children:["Range queries like",e.jsx("span",{className:"small",children:'"WHERE createdAt BETWEEN A AND B"'})]})]})]}),e.jsx("p",{className:"note",children:"Many databases make primary key clustered by default, but not always."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(n,{})}),e.jsx("h3",{className:"h3",children:"Non-clustered index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"non-clustered index"})," is a separate structure that stores index keys and pointers to the actual table rows. Table rows are not stored in index order."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"How many"}),e.jsx("div",{className:"v",children:"Multiple can exist on the same table."})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Best for"}),e.jsx("div",{className:"v",children:"Fast lookups on frequently filtered columns."})]})]}),e.jsx("p",{className:"note",children:"It is like having multiple indexes in a book for different topics."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(l,{})}),e.jsx("h3",{className:"h3",children:"B-Tree"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"B-Tree"})," is the most common index structure in relational databases. It stays balanced so searching is fast. It supports both equality and range queries efficiently."]}),e.jsxs("div",{className:"tree",children:[e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Good for"}),e.jsx("span",{className:"tVal",children:'"=", "<", ">", BETWEEN, ORDER BY'})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Why"}),e.jsx("span",{className:"tVal",children:"Balanced tree means fewer disk reads while searching"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("span",{className:"tLabel",children:"Common use"}),e.jsx("span",{className:"tVal",children:"Primary keys, createdAt sorting, range filters"})]})]}),e.jsx("p",{className:"note",children:"In interviews, just remember this: B-Tree is default because it handles many query types well."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"Hash index"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"hash index"})," uses a hash function to map a key to a bucket. It is very fast for equality lookups."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Great for"}),e.jsx("div",{className:"v",children:'Equality - "WHERE id = 10"'})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Bad for"}),e.jsxs("div",{className:"v",children:["Range queries and sorting",e.jsx("span",{className:"small",children:"Example: BETWEEN, ORDER BY"})]})]})]}),e.jsx("p",{className:"note",children:"Hash indexes are not always available in all engines for all table types."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Trade-offs"})]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:[e.jsx("b",{children:"Faster reads"})," but ",e.jsx("b",{children:"slower writes"})," ","because index must be updated on INSERT, UPDATE, DELETE"]}),e.jsxs("li",{children:["Uses extra ",e.jsx("b",{children:"storage"})]}),e.jsx("li",{children:"Too many indexes can slow down write-heavy systems"}),e.jsx("li",{children:"Wrong indexes do nothing but still cost space and update time"}),e.jsx("li",{children:"Index maintenance can increase complexity"})]}),e.jsx("p",{className:"note",children:"Rule: index what you search and join on often. Avoid indexing everything blindly."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"B-Tree is general purpose. Hash is equality only. Index speeds reads but adds write and storage cost."})]})]})]})})]})};export{b as default};
+    `},v=()=>{const[s,l]=a.useState(!0),r=a.useMemo(()=>({id:"backupAndRecovery",title:"Backup and Recovery",sub:"Full, incremental, differential backups, crash recovery, logs, and checkpoints."}),[]);return e.jsxs(m.Wrapper,{id:r.id,children:[e.jsxs("button",{type:"button",className:`head ${s?"open":""}`,onClick:()=>l(c=>!c),"aria-expanded":s,"aria-controls":`${r.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(i,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:r.title}),e.jsx("span",{className:"badge",children:"Safety"})]}),e.jsx("p",{className:"sub",children:r.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(t,{})})]}),e.jsx("div",{id:`${r.id}-content`,className:`content ${s?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"Why backup and recovery matter"})]}),e.jsxs("p",{className:"p",children:["Backups protect you from ",e.jsx("b",{children:"human mistakes"})," ","(accidental delete),",e.jsx("b",{children:"hardware failures"}),", ",e.jsx("b",{children:"software bugs"}),", and ",e.jsx("b",{children:"crashes"}),". Recovery is the process of bringing the database back to a correct state."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Backup"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Restore"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Replay logs"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Consistent state"})]}),e.jsx("p",{className:"note",children:"Backups give you a base copy. Logs help you recover the latest committed changes."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Backup types"})]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Full backup"}),e.jsxs("div",{className:"v",children:["Takes a complete copy of the database at a point in time.",e.jsx("span",{className:"small",children:"Pros: simplest restore - Cons: slower and larger size"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Incremental backup"}),e.jsxs("div",{className:"v",children:["Backs up only the data changed since the"," ",e.jsx("b",{children:"last backup"})," (full or incremental).",e.jsx("span",{className:"small",children:"Pros: fast and small - Cons: restore needs full + all incrementals"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Differential backup"}),e.jsxs("div",{className:"v",children:["Backs up only the data changed since the"," ",e.jsx("b",{children:"last full backup"}),".",e.jsx("span",{className:"small",children:"Pros: restore needs full + latest differential - Cons: grows bigger over time"})]})]})]}),e.jsxs("div",{className:"compare",children:[e.jsxs("div",{className:"row head",children:[e.jsx("div",{children:"Type"}),e.jsx("div",{children:"Restore requirement"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Full"}),e.jsx("div",{children:"Restore the full backup"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Incremental"}),e.jsx("div",{children:"Full + every incremental in order"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Differential"}),e.jsx("div",{children:"Full + latest differential"})]})]}),e.jsx("p",{className:"note",children:"Simple interview line: Incremental is smaller but restore is longer. Differential is larger but restore is simpler."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Crash recovery"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Crash recovery"})," means restoring the database to a correct state after a crash like power loss or server restart."]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:["Ensure ",e.jsx("b",{children:"committed"})," transactions are not lost"]}),e.jsxs("li",{children:["Undo ",e.jsx("b",{children:"uncommitted"})," transactions to avoid partial updates"]}),e.jsx("li",{children:"Bring database back to a consistent state"})]}),e.jsx("p",{className:"note",children:"Recovery is mainly about redo committed work and undo incomplete work."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Log-based recovery"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Log-based recovery"})," uses a log file that records changes made by transactions. The log is used to ",e.jsx("b",{children:"redo"})," or ",e.jsx("b",{children:"undo"})," operations during recovery."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Redo"}),e.jsx("div",{className:"v",children:"Re-apply changes of committed transactions if they were not written to disk."})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Undo"}),e.jsx("div",{className:"v",children:"Roll back changes of uncommitted transactions to remove partial updates."})]})]}),e.jsx("p",{className:"note",children:"Logs are usually written before data pages. That rule is called WAL."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Checkpoints"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"checkpoint"}),' is a marker that says "up to this point, the database has flushed enough info to make recovery faster". It reduces how far back the DBMS must scan the log after a crash.']}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Log grows"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Checkpoint"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Less redo work"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Faster restart"})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Checkpoints write a safe recovery point into the log"}),e.jsx("li",{children:"DBMS flushes some dirty pages to disk"}),e.jsx("li",{children:"Recovery scans logs mainly after the last checkpoint"})]}),e.jsx("p",{className:"note",children:"Without checkpoints, recovery may need to scan a huge log, slowing restart."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"Quick scenario you can say in interviews"})]}),e.jsxs("div",{className:"scenario",children:[e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"1"}),e.jsxs("div",{className:"txt",children:["Restore latest ",e.jsx("b",{children:"full backup"})]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"2"}),e.jsxs("div",{className:"txt",children:["Apply ",e.jsx("b",{children:"latest differential"})," or all"," ",e.jsx("b",{children:"incrementals"})]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"3"}),e.jsxs("div",{className:"txt",children:["Use ",e.jsx("b",{children:"logs"})," to redo committed and undo uncommitted work"]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"4"}),e.jsx("div",{className:"txt",children:"Checkpoint helps by cutting log scan time"})]})]})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(i,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Full is base copy. Incremental is since last backup. Differential is since last full. Logs do redo and undo. Checkpoints speed recovery."})]})]})]})})]})};export{v as default};

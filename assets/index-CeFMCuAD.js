@@ -1,4 +1,4 @@
-import{c as t,r as i,j as e,b as r,d as c,B as o,s as d,o as x,q as p,C as h}from"./index-Mc0Xt7Eb.js";const m={Wrapper:t.section`
+import{c as t,r as i,j as e,b as s,d as l,o as c,H as d,T as p,F as x,E as h}from"./index-CyXpBq5a.js";const m={Wrapper:t.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -42,6 +42,7 @@ import{c as t,r as i,j as e,b as r,d as c,B as o,s as d,o as x,q as p,C as h}fro
             opacity: 0.95;
         }
 
+        /* subtle table grid texture */
         .head::after {
             content: "";
             position: absolute;
@@ -252,6 +253,12 @@ import{c as t,r as i,j as e,b as r,d as c,B as o,s as d,o as x,q as p,C as h}fro
             flex: 0 0 auto;
         }
 
+        .cIcon.warn {
+            color: var(--color-warning);
+            box-shadow: 0 0 0 4px
+                color-mix(in srgb, var(--color-warning) 10%, transparent);
+        }
+
         .cIcon svg {
             width: 18px;
             height: 18px;
@@ -314,24 +321,56 @@ import{c as t,r as i,j as e,b as r,d as c,B as o,s as d,o as x,q as p,C as h}fro
             color: var(--color-text-secondary);
             font-size: 13.5px;
             line-height: 1.55;
-            padding-left: 14px;
-            position: relative;
         }
 
-        .list li::before {
-            content: "";
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--color-primary);
-            position: absolute;
-            left: 0;
-            top: 8px;
-            opacity: 0.9;
-        }
-
-        .ex {
+        .kvs {
+            display: grid;
+            gap: 10px;
             margin-top: 10px;
+        }
+
+        .kv {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 14px;
+            border: 1px solid var(--color-border);
+            background: color-mix(
+                in srgb,
+                var(--color-surface-2) 78%,
+                transparent
+            );
+        }
+
+        .k {
+            font-weight: 900;
+            color: var(--color-text-primary);
+            font-size: 13px;
+        }
+
+        .v {
+            color: var(--color-text-secondary);
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .small {
+            display: block;
+            margin-top: 3px;
+            color: var(--color-text-muted);
+            font-size: 12.5px;
+            line-height: 1.5;
+        }
+
+        .badGood {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0 10px;
+        }
+
+        .bgCard {
             border-radius: 14px;
             border: 1px solid var(--color-border);
             background: color-mix(
@@ -342,74 +381,42 @@ import{c as t,r as i,j as e,b as r,d as c,B as o,s as d,o as x,q as p,C as h}fro
             padding: 10px;
         }
 
-        .exTitle {
+        .bgCard.bad {
+            box-shadow: 0 0 0 4px
+                color-mix(in srgb, var(--color-error) 10%, transparent);
+        }
+
+        .bgCard.good {
+            box-shadow: 0 0 0 4px
+                color-mix(in srgb, var(--color-success) 10%, transparent);
+        }
+
+        .bgTitle {
             font-weight: 900;
             color: var(--color-text-primary);
             font-size: 12.5px;
             margin-bottom: 6px;
         }
 
-        .code {
-            width: 100%;
-            overflow: auto;
-            background: var(--color-code-bg);
-            border: 1px solid var(--color-code-border);
-            border-radius: 12px;
-            padding: 10px;
-            color: var(--color-text-primary);
-            font-size: 12.5px;
-            line-height: 1.6;
-        }
-
-        .exText {
-            margin-top: 8px;
-            color: var(--color-text-muted);
-            font-size: 12.5px;
-            line-height: 1.55;
-        }
-
-        .table {
-            border-radius: 14px;
-            border: 1px solid var(--color-border);
-            overflow: hidden;
-            background: color-mix(
-                in srgb,
-                var(--color-surface-2) 76%,
-                transparent
-            );
-            margin-top: 10px;
-        }
-
-        .tRow {
-            display: grid;
-            grid-template-columns: 160px 1.2fr 1fr;
-            gap: 10px;
-            padding: 10px;
-            border-top: 1px solid var(--color-border);
-        }
-
-        .tRow:first-child {
-            border-top: 0;
-        }
-
-        .tRow.head {
-            background: color-mix(
-                in srgb,
-                var(--color-surface) 80%,
-                transparent
-            );
-        }
-
-        .tRow.head div {
-            color: var(--color-text-primary);
-            font-weight: 900;
-            font-size: 12.5px;
-        }
-
-        .tRow div {
+        .bgText {
             color: var(--color-text-secondary);
             font-size: 12.8px;
             line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .bgMono {
+            border-radius: 12px;
+            border: 1px solid var(--color-code-border);
+            background: var(--color-code-bg);
+            padding: 10px;
+            color: var(--color-text-primary);
+            font-size: 12.5px;
+            line-height: 1.45;
+            font-family:
+                ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                "Liberation Mono", "Courier New", monospace;
+            overflow-x: auto;
         }
 
         .bottomNote {
@@ -467,8 +474,12 @@ import{c as t,r as i,j as e,b as r,d as c,B as o,s as d,o as x,q as p,C as h}fro
                 grid-column: span 12;
             }
 
-            .tRow {
+            .badGood {
+                grid-template-columns: 1fr;
+            }
+
+            .kv {
                 grid-template-columns: 1fr;
             }
         }
-    `},b=()=>{const[a,n]=i.useState(!0),s=i.useMemo(()=>({id:"constraints",title:"Constraints",sub:"Rules that protect data quality - NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK, DEFAULT."}),[]);return e.jsxs(m.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${a?"open":""}`,onClick:()=>n(l=>!l),"aria-expanded":a,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(r,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"Data rules"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(c,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${a?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(r,{})}),e.jsx("h3",{className:"h3",children:"What is a constraint"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"constraint"})," is a rule enforced by the database to keep data valid. It prevents wrong inserts and updates, so your tables do not become messy over time."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Integrity"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Consistency"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Safety"})]}),e.jsx("p",{className:"note",children:"Constraints are checked automatically on INSERT and UPDATE."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"NOT NULL"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"NOT NULL"})," means this column must always have a value. It cannot be NULL."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"name VARCHAR(100) NOT NULL"}),e.jsx("div",{className:"exText",children:'A user must have a name. Blank string "" is allowed, but NULL is not.'})]}),e.jsx("p",{className:"note",children:'NULL means "unknown or missing", it is not the same as 0 or "".'})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"UNIQUE"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"UNIQUE"})," means all values in this column must be different. No duplicates allowed."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"email VARCHAR(255) UNIQUE"}),e.jsx("div",{className:"exText",children:"Two users cannot have the same email."})]}),e.jsx("p",{className:"note",children:'Many databases allow multiple NULLs in a UNIQUE column, because NULL is treated as "no value".'})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"PRIMARY KEY"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"PRIMARY KEY"})," uniquely identifies each row. It is basically ",e.jsx("b",{children:"UNIQUE + NOT NULL"})," ","together."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"id INT PRIMARY KEY"}),e.jsx("div",{className:"exText",children:"Each row must have a unique id and it cannot be NULL."})]}),e.jsx("p",{className:"note",children:"One table has only one primary key, but it can be a composite key."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"FOREIGN KEY"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"FOREIGN KEY"})," links one table to another. It ensures the referenced value exists in the parent table. This keeps"," ",e.jsx("b",{children:"referential integrity"}),"."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"orders.user_id REFERENCES users(id)"}),e.jsx("div",{className:"exText",children:"An order must belong to a valid user. You cannot set user_id to a non-existing user."})]}),e.jsx("p",{className:"note",children:"Deleting parent rows can affect child rows, often controlled by ON DELETE rules like CASCADE or SET NULL."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"CHECK"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"CHECK"})," enforces a condition on values. If the condition fails, the insert or update is rejected."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"age INT CHECK (age >= 0 AND age <= 120)"}),e.jsx("div",{className:"exText",children:"Age must stay in a valid range."})]}),e.jsx("p",{className:"note",children:`CHECK is great for domain rules like "price >= 0" or "status in ('pending','paid')".`})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"DEFAULT"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"DEFAULT"})," sets a value automatically when no value is provided. It avoids NULLs and makes inserts easier."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("pre",{className:"code",children:"status VARCHAR(20) DEFAULT 'active'"}),e.jsx("div",{className:"exText",children:'If status is not given, it becomes "active".'})]}),e.jsx("p",{className:"note",children:"DEFAULT is used for timestamps, boolean flags, and common initial states."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(r,{})}),e.jsx("h3",{className:"h3",children:"Quick comparison"})]}),e.jsxs("div",{className:"table",children:[e.jsxs("div",{className:"tRow head",children:[e.jsx("div",{children:"Constraint"}),e.jsx("div",{children:"What it prevents"}),e.jsx("div",{children:"Simple use case"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"NOT NULL"}),e.jsx("div",{children:"Missing values"}),e.jsx("div",{children:"name, created_at"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"UNIQUE"}),e.jsx("div",{children:"Duplicate values"}),e.jsx("div",{children:"email, phone"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"PRIMARY KEY"}),e.jsx("div",{children:"Duplicate or NULL identity"}),e.jsx("div",{children:"id"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"FOREIGN KEY"}),e.jsx("div",{children:"Invalid references"}),e.jsx("div",{children:"orders.user_id"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"CHECK"}),e.jsx("div",{children:"Invalid domain values"}),e.jsx("div",{children:"price >= 0"})]}),e.jsxs("div",{className:"tRow",children:[e.jsx("div",{children:"DEFAULT"}),e.jsx("div",{children:"Empty initial state"}),e.jsx("div",{children:"status = 'active'"})]})]}),e.jsx("p",{className:"note",children:"Interview line: constraints are the database side validation layer, they protect data even if app code has bugs."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(r,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"PRIMARY KEY identifies, FOREIGN KEY connects, UNIQUE avoids duplicates, NOT NULL avoids missing, CHECK enforces rules, DEFAULT fills missing values."})]})]})]})})]})};export{b as default};
+    `},b=()=>{const[a,o]=i.useState(!0),r=i.useMemo(()=>({id:"securityInDbms",title:"Security in DBMS",sub:"Authentication, authorization, roles, encryption at rest and in transit, and SQL injection basics."}),[]);return e.jsxs(m.Wrapper,{id:r.id,children:[e.jsxs("button",{type:"button",className:`head ${a?"open":""}`,onClick:()=>o(n=>!n),"aria-expanded":a,"aria-controls":`${r.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(s,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:r.title}),e.jsx("span",{className:"badge",children:"Must know"})]}),e.jsx("p",{className:"sub",children:r.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(l,{})})]}),e.jsx("div",{id:`${r.id}-content`,className:`content ${a?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(c,{})}),e.jsx("h3",{className:"h3",children:"Authentication"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Authentication"}),' means verifying identity. DBMS checks "who you are" before allowing access.']}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Common methods - password, certificate, token, SSO (Single Sign-On)"}),e.jsx("li",{children:"Good practice - strong passwords, rotate credentials, use MFA (Multi-Factor Authentication)"})]}),e.jsx("p",{className:"note",children:"Memory: authentication is identity proof."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"Authorization"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Authorization"}),' means permissions. DBMS decides "what you can do" after you are authenticated.']}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"READ"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"WRITE"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"ADMIN"})]}),e.jsx("p",{className:"note",children:"Memory: authorization is allowed actions."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Roles"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"role"})," is a named set of permissions. Instead of giving permissions to each user one by one, assign a role to a user."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Why roles"}),e.jsx("div",{className:"v",children:"Easier management, less mistakes, consistent access control."})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Examples"}),e.jsxs("div",{className:"v",children:["reader role - only SELECT",e.jsx("span",{className:"small",children:"writer role - SELECT + INSERT + UPDATE"}),e.jsx("span",{className:"small",children:"admin role - schema changes + user management"})]})]})]}),e.jsx("p",{className:"note",children:"Follow least privilege: give only the permissions needed for the job."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Encryption at rest"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Encryption at rest"})," means encrypting data stored on disk. If someone steals the database files or disk snapshot, they cannot read it without the key."]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Applies to - data files, backups, snapshots"}),e.jsx("li",{children:"Common approach - TDE (Transparent Data Encryption)"}),e.jsx("li",{children:"Key management matters - keep keys separate from data"})]}),e.jsx("p",{className:"note",children:"At rest protects storage. It does not protect data while travelling on the network."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(s,{})}),e.jsx("h3",{className:"h3",children:"Encryption in transit"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Encryption in transit"})," means encrypting data while it moves between client and DB server, or between DB nodes. This prevents sniffing and man-in-the-middle attacks."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"TLS"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"SSL"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Certificates"})]}),e.jsx("p",{className:"note",children:"Use TLS. SSL term is still used, but modern setups are TLS based."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon warn",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"SQL injection basics"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"SQL injection"})," is an attack where an attacker tricks your app into running unintended SQL by injecting input into a query string. This can leak data, bypass login, or even delete tables."]}),e.jsxs("div",{className:"badGood",children:[e.jsxs("div",{className:"bgCard bad",children:[e.jsx("div",{className:"bgTitle",children:"Bad pattern"}),e.jsx("div",{className:"bgText",children:"Building SQL by string concatenation with user input."}),e.jsx("div",{className:"bgMono",children:'SELECT * FROM users WHERE email = " + userEmail'})]}),e.jsxs("div",{className:"bgCard good",children:[e.jsx("div",{className:"bgTitle",children:"Good pattern"}),e.jsx("div",{className:"bgText",children:"Use parameterized queries or prepared statements."}),e.jsx("div",{className:"bgMono",children:"SELECT * FROM users WHERE email = ?"})]})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Always use prepared statements and parameterized queries"}),e.jsx("li",{children:"Validate input types and lengths"}),e.jsx("li",{children:"Use least privilege DB users for apps"}),e.jsx("li",{children:"Avoid showing raw SQL errors to users"})]}),e.jsx("p",{className:"note",children:"Most SQL injection happens at application layer, not inside the DBMS itself."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(s,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Authentication - who you are. Authorization - what you can do. Encrypt disk and network. Prevent SQL injection with parameters."})]})]})]})})]})};export{b as default};
