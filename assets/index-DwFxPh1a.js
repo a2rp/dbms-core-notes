@@ -1,4 +1,4 @@
-import{c as d,r as l,j as e,i,d as c,a as o,m as x,s as p,o as a,q as m}from"./index-CyXpBq5a.js";const h={Wrapper:d.section`
+import{d as n,r as a,j as e,K as i,c as t,E as d,g as o,x as p,C as x,U as h}from"./index-eBlkMJOA.js";const m={Wrapper:n.section`
         width: 100%;
         margin-bottom: 10px;
 
@@ -306,34 +306,15 @@ import{c as d,r as l,j as e,i,d as c,a as o,m as x,s as p,o as a,q as m}from"./i
             user-select: none;
         }
 
-        .ex {
-            margin-top: 10px;
-            border-radius: 14px;
-            border: 1px solid var(--color-border);
-            background: color-mix(
-                in srgb,
-                var(--color-surface-2) 78%,
-                transparent
-            );
-            padding: 10px;
+        .list {
+            display: grid;
+            gap: 10px;
         }
 
-        .exTitle {
-            font-weight: 900;
-            color: var(--color-text-primary);
-            font-size: 12.5px;
-            margin-bottom: 6px;
-        }
-
-        .code {
-            font-family:
-                ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-                "Liberation Mono", "Courier New", monospace;
-            font-size: 12.5px;
-            color: var(--color-text-primary);
-            line-height: 1.6;
-            white-space: pre-wrap;
-            word-break: break-word;
+        .list li {
+            color: var(--color-text-secondary);
+            font-size: 13.5px;
+            line-height: 1.55;
         }
 
         .kvs {
@@ -344,7 +325,7 @@ import{c as d,r as l,j as e,i,d as c,a as o,m as x,s as p,o as a,q as m}from"./i
 
         .kv {
             display: grid;
-            grid-template-columns: 140px 1fr;
+            grid-template-columns: 170px 1fr;
             gap: 10px;
             padding: 10px;
             border-radius: 14px;
@@ -376,39 +357,75 @@ import{c as d,r as l,j as e,i,d as c,a as o,m as x,s as p,o as a,q as m}from"./i
             line-height: 1.5;
         }
 
-        .keysGrid {
+        .compare {
+            border-radius: 14px;
+            border: 1px solid var(--color-border);
+            overflow: hidden;
+            background: color-mix(
+                in srgb,
+                var(--color-surface-2) 76%,
+                transparent
+            );
             margin-top: 10px;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 10px;
         }
 
-        .kCard {
-            grid-column: span 6;
-            border-radius: 16px;
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .row:first-child {
+            border-top: 0;
+        }
+
+        .row.head {
+            background: color-mix(
+                in srgb,
+                var(--color-surface) 80%,
+                transparent
+            );
+        }
+
+        .row.head div {
+            color: var(--color-text-primary);
+            font-weight: 900;
+            font-size: 12.5px;
+        }
+
+        .row div {
+            color: var(--color-text-secondary);
+            font-size: 12.8px;
+            line-height: 1.5;
+        }
+
+        .scenario {
+            display: grid;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 34px 1fr;
+            gap: 10px;
+            align-items: center;
+            padding: 10px;
+            border-radius: 14px;
             border: 1px solid var(--color-border);
             background: color-mix(
                 in srgb,
                 var(--color-surface-2) 78%,
                 transparent
             );
-            padding: 12px;
         }
 
-        .kTitle {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 900;
-            color: var(--color-text-primary);
-            margin-bottom: 6px;
-            font-size: 13px;
-        }
-
-        .kIcon {
-            width: 30px;
-            height: 30px;
-            border-radius: 12px;
+        .num {
+            width: 28px;
+            height: 28px;
+            border-radius: 10px;
             display: grid;
             place-items: center;
             border: 1px solid var(--color-border);
@@ -418,27 +435,19 @@ import{c as d,r as l,j as e,i,d as c,a as o,m as x,s as p,o as a,q as m}from"./i
                 transparent
             );
             color: var(--color-primary);
-            flex: 0 0 auto;
+            font-weight: 900;
+            font-size: 12px;
         }
 
-        .kIcon svg {
-            width: 16px;
-            height: 16px;
-        }
-
-        .kBody {
+        .txt {
             color: var(--color-text-secondary);
             font-size: 13px;
-            line-height: 1.6;
+            line-height: 1.55;
         }
 
-        .kEx {
-            margin-top: 6px;
-            font-family:
-                ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-                "Liberation Mono", "Courier New", monospace;
-            font-size: 12.3px;
-            color: var(--color-text-muted);
+        .txt b {
+            color: var(--color-text-primary);
+            font-weight: 900;
         }
 
         .bottomNote {
@@ -500,8 +509,12 @@ import{c as d,r as l,j as e,i,d as c,a as o,m as x,s as p,o as a,q as m}from"./i
                 grid-template-columns: 1fr;
             }
 
-            .kCard {
-                grid-column: span 12;
+            .row {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                grid-template-columns: 1fr;
             }
         }
-    `},v=()=>{const[r,n]=l.useState(!0),s=l.useMemo(()=>({id:"relationalModel",title:"Relational Model",sub:"Relation, tuple, attribute, domain, degree, cardinality, and the full key family used in RDBMS."}),[]);return e.jsxs(h.Wrapper,{id:s.id,children:[e.jsxs("button",{type:"button",className:`head ${r?"open":""}`,onClick:()=>n(t=>!t),"aria-expanded":r,"aria-controls":`${s.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(i,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:s.title}),e.jsx("span",{className:"badge",children:"Tables and Keys"})]}),e.jsx("p",{className:"sub",children:s.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(c,{})})]}),e.jsx("div",{id:`${s.id}-content`,className:`content ${r?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(i,{})}),e.jsx("h3",{className:"h3",children:"Relation"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"relation"})," is a table in the relational model. It stores data as rows and columns."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("div",{className:"code",children:"STUDENT(studentId, name, email)"})]}),e.jsx("p",{className:"note",children:"Relation name is like the table name, and attributes are the column names."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Tuple"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"tuple"})," is a single row in a relation. It represents one record."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example row"}),e.jsx("div",{className:"code",children:'(101, "Ashish", "ash@example.com")'})]})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Attribute"})]}),e.jsxs("p",{className:"p",children:["An ",e.jsx("b",{children:"attribute"})," is a column in a table. It describes a property of the entity."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"studentId"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"name"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"email"})]}),e.jsx("p",{className:"note",children:"Attribute values come from a defined domain."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Domain"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"domain"})," is the allowed set of values for an attribute. It defines type and constraints."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Example"}),e.jsxs("div",{className:"v",children:["age domain could be 0 to 120",e.jsx("span",{className:"small",children:"integer values only"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Example"}),e.jsxs("div",{className:"v",children:["email domain could be valid email strings",e.jsx("span",{className:"small",children:'must contain "@"'})]})]})]}),e.jsx("p",{className:"note",children:"Domain helps ensure data correctness at the attribute level."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(i,{})}),e.jsx("h3",{className:"h3",children:"Degree"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Degree"})," is the number of attributes (columns) in a relation."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("div",{className:"code",children:"STUDENT(studentId, name, email) - degree is 3"})]})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Cardinality"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Cardinality"})," is the number of tuples (rows) in a relation."]}),e.jsxs("div",{className:"ex",children:[e.jsx("div",{className:"exTitle",children:"Example"}),e.jsx("div",{className:"code",children:"STUDENT has 500 rows - cardinality is 500"})]}),e.jsx("p",{className:"note",children:"Do not confuse this with ER diagram cardinality like 1:N. Here it means row count."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(a,{})}),e.jsx("h3",{className:"h3",children:"Keys in DBMS"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"key"})," is a set of attributes that identifies a tuple uniquely or helps connect tables correctly. Different keys serve different purposes."]}),e.jsxs("div",{className:"keysGrid",children:[e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(a,{})}),"Super key"]}),e.jsxs("div",{className:"kBody",children:["Any attribute set that uniquely identifies a row. It can include extra attributes.",e.jsx("div",{className:"kEx",children:"Example: (studentId) or (studentId, email)"})]})]}),e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(a,{})}),"Candidate key"]}),e.jsxs("div",{className:"kBody",children:["Minimal super key. No extra attributes. There can be multiple candidate keys.",e.jsx("div",{className:"kEx",children:"Example: (studentId) and (email) if both are unique"})]})]}),e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(a,{})}),"Primary key"]}),e.jsxs("div",{className:"kBody",children:["One selected candidate key used as main identifier. It cannot be NULL and should be stable.",e.jsx("div",{className:"kEx",children:"Example: studentId"})]})]}),e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(a,{})}),"Alternate key"]}),e.jsxs("div",{className:"kBody",children:["Candidate keys not chosen as primary key. Still unique.",e.jsx("div",{className:"kEx",children:"Example: email"})]})]}),e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(m,{})}),"Foreign key"]}),e.jsxs("div",{className:"kBody",children:["Attribute in one table that references primary key of another table. It builds relationships.",e.jsx("div",{className:"kEx",children:"Example: ENROLLMENT.studentId references STUDENT.studentId"})]})]}),e.jsxs("div",{className:"kCard",children:[e.jsxs("div",{className:"kTitle",children:[e.jsx("span",{className:"kIcon",children:e.jsx(o,{})}),"Composite key"]}),e.jsxs("div",{className:"kBody",children:["Key made of 2 or more attributes. Used when one attribute is not enough.",e.jsx("div",{className:"kEx",children:"Example: (studentId, courseId) in ENROLLMENT"})]})]})]}),e.jsx("p",{className:"note",children:"Memory: super key identifies, candidate key is minimal, primary key is chosen, alternate key is remaining, foreign key links, composite key is multi-column."})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(a,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Degree is columns, cardinality is rows. Candidate keys are minimal unique sets, and one becomes primary key."})]})]})]})})]})};export{v as default};
+    `},v=()=>{const[s,l]=a.useState(!0),r=a.useMemo(()=>({id:"backupAndRecovery",title:"Backup and Recovery",sub:"Full, incremental, differential backups, crash recovery, logs, and checkpoints."}),[]);return e.jsxs(m.Wrapper,{id:r.id,children:[e.jsxs("button",{type:"button",className:`head ${s?"open":""}`,onClick:()=>l(c=>!c),"aria-expanded":s,"aria-controls":`${r.id}-content`,children:[e.jsxs("div",{className:"left",children:[e.jsx("span",{className:"icon",children:e.jsx(i,{})}),e.jsxs("div",{className:"text",children:[e.jsxs("div",{className:"titleRow",children:[e.jsx("h2",{className:"title",children:r.title}),e.jsx("span",{className:"badge",children:"Safety"})]}),e.jsx("p",{className:"sub",children:r.sub})]})]}),e.jsx("span",{className:"chev",children:e.jsx(t,{})})]}),e.jsx("div",{id:`${r.id}-content`,className:`content ${s?"show":""}`,children:e.jsxs("div",{className:"inner",children:[e.jsxs("div",{className:"grid",children:[e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(d,{})}),e.jsx("h3",{className:"h3",children:"Why backup and recovery matter"})]}),e.jsxs("p",{className:"p",children:["Backups protect you from ",e.jsx("b",{children:"human mistakes"})," ","(accidental delete),",e.jsx("b",{children:"hardware failures"}),", ",e.jsx("b",{children:"software bugs"}),", and ",e.jsx("b",{children:"crashes"}),". Recovery is the process of bringing the database back to a correct state."]}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Backup"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Restore"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Replay logs"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Consistent state"})]}),e.jsx("p",{className:"note",children:"Backups give you a base copy. Logs help you recover the latest committed changes."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Backup types"})]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Full backup"}),e.jsxs("div",{className:"v",children:["Takes a complete copy of the database at a point in time.",e.jsx("span",{className:"small",children:"Pros: simplest restore - Cons: slower and larger size"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Incremental backup"}),e.jsxs("div",{className:"v",children:["Backs up only the data changed since the"," ",e.jsx("b",{children:"last backup"})," (full or incremental).",e.jsx("span",{className:"small",children:"Pros: fast and small - Cons: restore needs full + all incrementals"})]})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Differential backup"}),e.jsxs("div",{className:"v",children:["Backs up only the data changed since the"," ",e.jsx("b",{children:"last full backup"}),".",e.jsx("span",{className:"small",children:"Pros: restore needs full + latest differential - Cons: grows bigger over time"})]})]})]}),e.jsxs("div",{className:"compare",children:[e.jsxs("div",{className:"row head",children:[e.jsx("div",{children:"Type"}),e.jsx("div",{children:"Restore requirement"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Full"}),e.jsx("div",{children:"Restore the full backup"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Incremental"}),e.jsx("div",{children:"Full + every incremental in order"})]}),e.jsxs("div",{className:"row",children:[e.jsx("div",{children:"Differential"}),e.jsx("div",{children:"Full + latest differential"})]})]}),e.jsx("p",{className:"note",children:"Simple interview line: Incremental is smaller but restore is longer. Differential is larger but restore is simpler."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(p,{})}),e.jsx("h3",{className:"h3",children:"Crash recovery"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Crash recovery"})," means restoring the database to a correct state after a crash like power loss or server restart."]}),e.jsxs("ul",{className:"list",children:[e.jsxs("li",{children:["Ensure ",e.jsx("b",{children:"committed"})," transactions are not lost"]}),e.jsxs("li",{children:["Undo ",e.jsx("b",{children:"uncommitted"})," transactions to avoid partial updates"]}),e.jsx("li",{children:"Bring database back to a consistent state"})]}),e.jsx("p",{className:"note",children:"Recovery is mainly about redo committed work and undo incomplete work."})]}),e.jsxs("div",{className:"card",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(o,{})}),e.jsx("h3",{className:"h3",children:"Log-based recovery"})]}),e.jsxs("p",{className:"p",children:[e.jsx("b",{children:"Log-based recovery"})," uses a log file that records changes made by transactions. The log is used to ",e.jsx("b",{children:"redo"})," or ",e.jsx("b",{children:"undo"})," operations during recovery."]}),e.jsxs("div",{className:"kvs",children:[e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Redo"}),e.jsx("div",{className:"v",children:"Re-apply changes of committed transactions if they were not written to disk."})]}),e.jsxs("div",{className:"kv",children:[e.jsx("div",{className:"k",children:"Undo"}),e.jsx("div",{className:"v",children:"Roll back changes of uncommitted transactions to remove partial updates."})]})]}),e.jsx("p",{className:"note",children:"Logs are usually written before data pages. That rule is called WAL."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(x,{})}),e.jsx("h3",{className:"h3",children:"Checkpoints"})]}),e.jsxs("p",{className:"p",children:["A ",e.jsx("b",{children:"checkpoint"}),' is a marker that says "up to this point, the database has flushed enough info to make recovery faster". It reduces how far back the DBMS must scan the log after a crash.']}),e.jsxs("div",{className:"mini",children:[e.jsx("span",{className:"pill",children:"Log grows"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Checkpoint"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Less redo work"}),e.jsx("span",{className:"dash",children:"-"}),e.jsx("span",{className:"pill",children:"Faster restart"})]}),e.jsxs("ul",{className:"list",children:[e.jsx("li",{children:"Checkpoints write a safe recovery point into the log"}),e.jsx("li",{children:"DBMS flushes some dirty pages to disk"}),e.jsx("li",{children:"Recovery scans logs mainly after the last checkpoint"})]}),e.jsx("p",{className:"note",children:"Without checkpoints, recovery may need to scan a huge log, slowing restart."})]}),e.jsxs("div",{className:"card span12",children:[e.jsxs("div",{className:"cardTop",children:[e.jsx("span",{className:"cIcon",children:e.jsx(h,{})}),e.jsx("h3",{className:"h3",children:"Quick scenario you can say in interviews"})]}),e.jsxs("div",{className:"scenario",children:[e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"1"}),e.jsxs("div",{className:"txt",children:["Restore latest ",e.jsx("b",{children:"full backup"})]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"2"}),e.jsxs("div",{className:"txt",children:["Apply ",e.jsx("b",{children:"latest differential"})," or all"," ",e.jsx("b",{children:"incrementals"})]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"3"}),e.jsxs("div",{className:"txt",children:["Use ",e.jsx("b",{children:"logs"})," to redo committed and undo uncommitted work"]})]}),e.jsxs("div",{className:"step",children:[e.jsx("div",{className:"num",children:"4"}),e.jsx("div",{className:"txt",children:"Checkpoint helps by cutting log scan time"})]})]})]})]}),e.jsxs("div",{className:"bottomNote",children:[e.jsx("div",{className:"bnIcon",children:e.jsx(i,{})}),e.jsxs("div",{className:"bnText",children:[e.jsx("div",{className:"bnTitle",children:"Quick memory"}),e.jsx("div",{className:"bnSub",children:"Full is base copy. Incremental is since last backup. Differential is since last full. Logs do redo and undo. Checkpoints speed recovery."})]})]})]})})]})};export{v as default};
