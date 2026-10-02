@@ -2,7 +2,7 @@
 
 A single-page revision guide for database management systems, covering data models, SQL, normalization, transactions, indexing, query processing, security, and distributed databases.
 
-![DBMS Core Notes screenshot](screenshot.png)
+![DBMS Core Notes screenshot](./screenshot.jpg)
 
 ## Features
 
