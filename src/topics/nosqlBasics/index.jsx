@@ -286,21 +286,24 @@ const NoSqlBasics = () => {
                                 </div>
 
                                 <div className="row">
-                                    <div>ACID transactions are common</div>
                                     <div>
-                                        Consistency model can vary, often
-                                        eventual consistency
+                                        ACID transactions are widely supported
+                                    </div>
+                                    <div>
+                                        Transaction and consistency guarantees
+                                        vary by system; many support ACID
+                                        transactions
                                     </div>
                                 </div>
 
                                 <div className="row">
                                     <div>
-                                        Vertical scaling is common (bigger
-                                        machine)
+                                        Often deployed with vertical scaling;
+                                        horizontal scaling is also possible
                                     </div>
                                     <div>
-                                        Horizontal scaling is common (more
-                                        machines)
+                                        Often designed for horizontal scaling;
+                                        deployment choices still vary
                                     </div>
                                 </div>
 
@@ -317,9 +320,10 @@ const NoSqlBasics = () => {
                             </div>
 
                             <p className="note">
-                                Rule of thumb: if relationships and correctness
-                                are core, SQL wins. If scale and flexible
-                                structure are core, NoSQL helps.
+                                Choose by data model, consistency needs, query
+                                patterns, scale, and operational fit. SQL and
+                                NoSQL systems overlap in the guarantees and
+                                workloads they support.
                             </p>
                         </div>
 

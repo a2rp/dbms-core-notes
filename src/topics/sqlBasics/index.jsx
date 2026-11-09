@@ -238,8 +238,10 @@ const SqlBasics = () => {
                             </div>
 
                             <p className="note">
-                                Best habit: always start with a WHERE clause in
-                                mind to avoid full table scans.
+                                For selective lookups, a WHERE clause can reduce
+                                rows to scan. Full scans are sometimes the right
+                                plan, such as for small tables or reports that
+                                need most rows.
                             </p>
                         </div>
 

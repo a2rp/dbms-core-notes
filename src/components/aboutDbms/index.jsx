@@ -19,10 +19,10 @@ const AboutDbms = () => {
 
                 <p className="sub">
                     The main value is control. A DBMS manages data integrity
-                    using keys and constraints, reduces duplication using
-                    normalization, and supports powerful searching using SQL.
-                    When many users work at the same time, transactions and
-                    locks make sure updates remain correct.
+                    using keys and constraints, reduces duplication through
+                    normalization, and supports querying with SQL. Concurrency
+                    control mechanisms such as locks and MVCC help coordinate
+                    updates from multiple users.
                 </p>
 
                 <p className="sub">
@@ -54,7 +54,8 @@ const AboutDbms = () => {
 
                     <p className="note">
                         Tables store rows. Keys define identity. Constraints
-                        keep data valid. Indexes make queries fast.
+                        protect data integrity. Indexes can speed up matching
+                        queries, with storage and write costs.
                     </p>
                 </div>
 
@@ -77,8 +78,9 @@ const AboutDbms = () => {
                     </div>
 
                     <p className="note">
-                        Query order: filter, join, group, aggregate, sort,
-                        limit. Learn this to debug SQL quickly.
+                        Logical flow: join data, filter rows, group, filter
+                        groups, select, sort, and limit. Learn this to debug
+                        SQL quickly.
                     </p>
                 </div>
 

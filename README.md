@@ -18,7 +18,7 @@ React, Vite, React Router, styled-components, React Icons, and CSS.
 
 ## Run locally
 
-Run npm install, then npm run dev. Use npm run build to create a production build and npm run deploy to publish it to GitHub Pages.
+Install dependencies with `npm install`, then start the local server with `npm run dev`. Run `npm run build` to create a production build. `npm run deploy` builds the site, adds the GitHub Pages route fallback, and publishes it.
 
 ## Links
 

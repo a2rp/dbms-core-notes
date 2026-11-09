@@ -1,25 +1,20 @@
 // src/components/header/index.jsx
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Styled } from "./styled";
 import { FiMoon, FiSun } from "react-icons/fi";
 const logo = import.meta.env.BASE_URL + "logo.png";
 
 const Header = () => {
     const [logoLoaded, setLogoLoaded] = useState(false);
-    const [theme, setTheme] = useState("dark");
-
-    // Init theme from localStorage or default
-    useEffect(() => {
-        const storedTheme = localStorage.getItem("app-theme");
-        const initialTheme = storedTheme || "dark";
-        setTheme(initialTheme);
-
-        if (initialTheme === "light") {
-            document.documentElement.setAttribute("data-theme", "light");
-        } else {
-            document.documentElement.removeAttribute("data-theme");
+    const [theme, setTheme] = useState(() => {
+        try {
+            return localStorage.getItem("dbms-core-notes-theme") === "light"
+                ? "light"
+                : "dark";
+        } catch {
+            return "dark";
         }
-    }, []);
+    });
 
     // Apply theme + persist
     useEffect(() => {
@@ -29,12 +24,14 @@ const Header = () => {
             document.documentElement.removeAttribute("data-theme");
         }
 
-        localStorage.setItem("app-theme", theme);
+        try {
+            localStorage.setItem("dbms-core-notes-theme", theme);
+        } catch {
+            // Theme changes still work for this session when storage is unavailable.
+        }
     }, [theme]);
 
-    const nextTheme = useMemo(() => {
-        return theme === "light" ? "dark" : "light";
-    }, [theme]);
+    const nextTheme = theme === "light" ? "dark" : "light";
 
     const handleToggle = () => {
         setTheme(nextTheme);

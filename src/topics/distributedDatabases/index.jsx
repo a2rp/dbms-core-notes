@@ -335,16 +335,18 @@ const DistributedDatabases = () => {
                                 <div className="row">
                                     <div>Consistency</div>
                                     <div>
-                                        Reads always reflect latest write or
-                                        error
+                                        Strong consistency can return the latest
+                                        committed value or reject the request;
+                                        behavior depends on the system
                                     </div>
                                 </div>
 
                                 <div className="row">
                                     <div>Availability</div>
                                     <div>
-                                        Always respond to requests, even if
-                                        stale
+                                        A non-failed node responds to each
+                                        request; during a partition, data may
+                                        be stale depending on the system
                                     </div>
                                 </div>
 

@@ -214,6 +214,12 @@ const QueryProcessingOptimization = () => {
                                 view it using EXPLAIN or EXPLAIN ANALYZE.
                             </p>
 
+                            <p className="note">
+                                EXPLAIN ANALYZE executes the statement to collect
+                                actual measurements. Use care with statements
+                                that change data.
+                            </p>
+
                             <div className="ex">
                                 <div className="exTitle">
                                     What you usually see
